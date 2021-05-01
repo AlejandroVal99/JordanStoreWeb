@@ -1,0 +1,194 @@
+.productForm {
+
+    &__title{
+        background:var(--main-red);
+        -webkit-background-clip: text;
+        -webkit-text-stroke: 4px transparent;
+        color:var(--main-white);
+        font-size: 90px;
+        margin-left: 50px;
+    }
+
+    &__form {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    &__layout {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 36px;
+
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        align-content: center;
+        padding: 0 3rem;
+    }
+
+    &__label {
+        margin-top: 16px;
+    }
+
+    &__btnSubmit {
+        background-image: var(--main-red);
+        color: var(--main-white);
+        width: 50%;
+        height: 50px;
+        border-radius: 4px;
+        margin: 0 auto;
+        font-size: 25px;
+    }
+    &__btnFields{
+        margin-top: 24px;
+        border:1px solid var(--main-black);
+        height: 35px; 
+    }
+    &__textField {
+        border: 1.5px solid var(--main-black);
+        height: 30px;
+        width: 100%;
+    }
+
+    &__textFieldDescription {
+        border: 1.5px solid;
+        width: 100%;
+        height: 70px;
+
+    }
+
+    &__selectModel {
+        height: 30px;
+        width: 100%;
+        border: 1px solid var(--main-black);
+    }
+}
+
+.checkboxColorContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 16px;
+
+    &__container {
+        position: relative;
+        text-align: center;
+        width: 30%;
+        height: 30px;
+        margin-bottom: 8px;
+
+    }
+
+    &__label {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__title {
+        user-select: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        border: 1px solid var(--main-black);
+    }
+
+    &__checkbox {
+        position: absolute;
+        cursor: pointer;
+        z-index: 1;
+        opacity: 0;
+
+    }
+
+    &__checkbox--red:checked~.checked--red {
+        background: var(--main-red);
+        color: var(--main-white);
+        border: 2px solid outset var(--main-white);
+    }
+
+    &__checkbox--blue:checked~.checked--blue {
+        background: blue;
+        color: var(--main-white);
+        border: 2px solid outset var(--main-white);
+    }
+    &__checkbox--grey:checked~.checked--grey {
+        background:darkgray;
+        color: var(--main-white);
+        border: 2px solid outset var(--main-white);
+    }
+    &__checkbox--black:checked~.checked--black {
+        background:var(--main-black);
+        color: var(--main-white);
+        border: 2px solid outset var(--main-white);
+    }
+    &__checkbox--white:checked~.checked--white {
+        background:var(--main-white);
+        border: 2px solid outset var(--main-white);
+    }
+    &__checkbox--gold:checked~.checked--gold {
+        background:goldenrod;
+        color: var(--main-white);
+        border: 2px solid outset var(--main-white);
+    }
+}
+
+.checkboxSizeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+    margin-top: 16px;
+
+    &__container {
+        position: relative;
+        text-align: center;
+        width: 30%;
+        height: 30px;
+        margin-bottom: 8px;
+        margin: 4px auto;
+
+    }
+   
+
+    &__label {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__title {
+        user-select: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        border: 1px solid var(--main-black);
+    }
+
+    &__checkbox {
+        position: absolute;
+        cursor: pointer;
+        z-index: 1;
+        opacity: 0;
+
+    }
+  
+    &__checkbox:checked~.checkedSize {
+        background:var(--main-black);
+        color: var(--main-white);
+    }
+}
+
+

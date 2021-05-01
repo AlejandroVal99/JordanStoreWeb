@@ -1,0 +1,139 @@
+.newsletter {
+    background-color: var(--main-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    &__title {
+        background: -webkit-linear-gradient(-90deg, #fff 5%, #000 70%);
+        -webkit-background-clip: text;
+        -webkit-text-stroke: 4px transparent;
+        color:var(--main-black);
+        
+        font-size: 90px;
+    }
+
+
+    &__info {
+        color: var(--main-white);
+        text-align: center;
+        width: 50%;
+        font-size: 20px;
+        margin-top: 32px;
+    }
+
+    &__inputEmail {
+        width: 70%;
+        background: var(--main-black);
+        border: 0px;
+        border-bottom: 2px solid var(--main-white);
+        margin-top: 24px;
+        height: 30px;
+        color: var(--main-white);
+        font-size: 20px;
+        text-align: center;
+    }
+
+    &__inputEmail::placeholder {
+        text-align: center;
+        color: var(--main-white);
+        font-size: 20px;
+    }
+
+    &__inputEmail:focus {
+        outline: none !important;
+    }
+
+    &__buttonSubs {
+        color: var(--main-black);
+        background: var(--main-white);
+        width: 70%;
+        height: 50px;
+        border-radius: 8px;
+        font-size: 25px;
+        margin-top: 40px;
+
+    }
+
+}
+
+@media (max-width: 950px) {
+
+    .newsletter {
+
+        &__title {
+            font-size: 70px;
+        }
+
+        &__info {
+            color: var(--main-white);
+            text-align: center;
+            min-width: 80%;
+            font-size: 18px;
+            margin-top: 32px;
+        }
+
+        &__inputEmail {
+            font-size: 18px;
+        }
+
+        &__inputEmail::placeholder {
+            font-size: 18px;
+        }
+    }
+
+
+}
+
+@media (max-width: 515px) {
+
+    .newsletter {
+
+        &__title {
+            font-size: 55px;
+        }
+
+        &__info {
+            color: var(--main-white);
+            text-align: center;
+            min-width: 80%;
+            font-size: 16px;
+            margin-top: 32px;
+        }
+
+        &__inputEmail {
+            font-size: 18px;
+        }
+
+        &__inputEmail::placeholder {
+            font-size: 18px;
+        }
+
+    }
+
+
+}
+
+@media (max-width: 395px) {
+
+    .newsletter {
+        &__title {
+            -webkit-text-stroke-width: 0.8px;
+            font-size: 50px;
+        }
+        &__info {
+          
+            font-size: 12px;
+            
+        }
+
+        &__inputEmail {
+            font-size: 12px;
+        }
+        &__inputEmail::placeholder {
+            font-size: 12px;
+        }
+    }
+}

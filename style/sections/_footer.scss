@@ -1,0 +1,133 @@
+.footer {
+    background-color: var(--main-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 50px 20px 50px;
+    border-top: 2px solid var(--main-white);
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__brandInfo {
+        color: var(--main-white);
+        font-size: 14px;
+        text-align: left;
+        width: 40%;
+    }
+
+    &__icon {
+        width: 12%;
+        margin-bottom: 24px;
+    }
+
+    
+
+    &__navBar {
+        display: flex;
+        flex-direction: column;
+        color: var(--main-white);
+        padding-right: 250px;
+        justify-content: center;
+        align-items: flex-start;
+
+        a {
+            margin-top: 16px;
+        }
+        a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background:var(--main-white);
+            transition: width .3s;
+        }
+        
+        a:hover::after {
+            width: 100%;
+            
+        }
+    }
+
+    &__socialMedia {
+        height: 20%;
+
+        margin-top: 24px;
+    }
+
+
+    &__socialIcon {
+        height: 40px;
+
+        margin: 0 4px;
+    }
+
+    &__copyright {
+        color: var(--main-white);
+        font-size: 14px;
+        margin-top: 16px;
+        text-align: center;
+    }
+
+    &__button {
+        background-image: var(--main-red);
+        color: var(--main-white);
+        width: 180%;
+        height: 48px;
+        border-radius: 4px;
+        margin-top: 16px;
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    .footer {
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__brandInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 70%;
+        }
+
+        &__navBar {
+            display: flex;
+            flex-direction: column;
+            color: var(--main-white);
+            margin-top: 32px;
+            width: 80%;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+
+            a {
+                margin-top: 8px;
+                
+            }
+            
+        }
+
+        &__button {
+            width: 80%;
+
+        }
+
+        &__socialMedia {
+            margin-top: 32px;
+        }
+
+    }
+
+
+
+}
