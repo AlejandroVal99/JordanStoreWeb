@@ -37,8 +37,9 @@
     }
 
     &__image {
-       
+        
         width: 100%;
+        transform: scaleX(-1);
         
     }
 }
@@ -60,7 +61,7 @@
            
     
             h2 {
-                font-size: 65px;
+                font-size: 55px;
                 text-align: left;
             }
     
@@ -75,6 +76,28 @@
         &__image{
             max-width: 550px;
             
+        }
+    }
+}
+@media(min-width:740px){
+    .newReleases {
+
+        &__title {
+    
+            h2 {
+                font-size: 65px;
+            }
+        }
+    }
+}
+@media(min-width:940px){
+    .newReleases {
+
+        &__title {
+    
+            h2 {
+                font-size: 72px;
+            }
         }
     }
 }

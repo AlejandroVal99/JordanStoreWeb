@@ -2,7 +2,7 @@
     display: flex;
     background-color: var(--main-black);
     height: 45px;
-   
+    font-size: 14px;
     overflow: hidden;
     justify-content: space-between;
     position: relative;
@@ -43,17 +43,7 @@
         }
     }
 
-    &__button {
-        color: var(--main-white);
-        background: var(--main-red);
-        text-align: center;
-        height: 80%;
-        width: 173px;
-        border-radius: 3px;
-        font-size: 18px;
-        margin-right: 3rem;
-
-    }
+   
 
     &__iconMobile {
         display: none;

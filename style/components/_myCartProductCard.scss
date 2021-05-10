@@ -1,0 +1,91 @@
+.myCartProductCard{
+    width: 95%;
+    border: 2px solid var(--main-black);
+    margin-bottom: 16px;
+    background: var(--second-white);
+    &__productContainer{
+        //border: 2px solid brown;
+    }
+    &__containerImg{
+        //border: 2px solid grey;
+        img{
+            width:100%;
+        }
+    }
+    &__containerInfo{
+        width: 100%;
+        border-top: 2px solid var(--main-black);
+        border-bottom: 2px solid var(--main-black);
+        display: flex;
+        flex-direction: column;
+        padding: 8px;
+    }
+    &__size{
+
+    }
+    &__name{
+        font-weight:600;
+        font-size: 20px;
+        margin: 10px 0;
+    }
+    &__price{
+        font-weight:600;
+        font-size: 24px;
+        align-self:flex-end;
+        margin-top: 16px;
+    }
+    &__editBar{
+        //border: 2px solid yellow;
+        display: flex;
+        justify-content: space-between;
+        padding: 4px;
+    }
+    &__btnEdit{
+        text-decoration: underline;
+    }
+    &__btnRemove{
+        color: var(--second-red);
+        //border: 2px solid indigo;
+    }
+}
+@media (min-width: 700px){
+    .myCartProductCard{
+       
+        &__productContainer{
+            display: flex;
+            height: fit-content;
+        }
+        &__containerImg{
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 2px solid var(--main-black);
+            img{
+                width:90%;
+                margin: 0 auto;
+            }
+        }
+        &__containerInfo{
+            width: 60%;
+            border:none;
+            position: relative;
+            min-height: 110px;
+
+        }
+        &__editBar{
+            //border: 2px solid yellow;
+            border-top: 2px solid var(--main-black);
+        }
+        &__name{
+            font-size: 26px;
+            margin-top: 16px;
+            margin-bottom: 0;
+        }
+        &__price{
+          position: absolute;
+          right: 10px;
+          bottom: 10px;
+        }
+    }
+}

@@ -1,17 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <link rel="stylesheet" href="../../style/index.css">
 </head>
+
 <body>
-    <label for="">PRICE RANGE</label>
-    <section class="range-slider">
-      <span class="rangeValues"></span>
-      <input value="500" min="500" max="50000" step="500" type="range">
-      <input value="50000" min="500" max="50000" step="500" type="range">
+  <header>
+
+  </header>
+  <div class="products__header">
+    <div class="products__title">
+      <h1>PRODUCTS</h1>
+    </div>
+    <button class="products__btnFilters">SHOW FILTERS</button>
+
+
+  </div>
+
+  <div class="products__layout">
+
+    <aside class="filterSort">
+
+      <form action="" class="sortForm">
+        
+        <h2 class="sortForm__titleCategorie">SORT BY:</h2>
+
+        <div class="sortForm__container">
+
+          <label class="sortForm__label">
+            <input class="sortForm__checkbox" type="radio" name="orderBy" id="">
+            <div class="sortForm__title checkedSort">
+              <p>Price: Low to High</p>
+            </div>
+          </label>
+        </div>
+
+        <div class="sortForm__container">
+          <label class="sortForm__label">
+            <input class="sortForm__checkbox" type="radio" name="orderBy" id="">
+            <div class="sortForm__title checkedSort">
+              <p>Price: High to Low</p>
+            </div>
+          </label>
+        </div>
+
+        <div class="sortForm__container">
+          <label class="sortForm__label">
+            <input class="sortForm__checkbox" type="radio" name="orderBy" id="">
+            <div class="sortForm__title checkedSort">
+              <p>Year Releases</p>
+            </div>
+          </label>
+        </div>
+
+      </form>
+
+      <form action="" class="filterForm">
+        <h2 class="filterForm__titleCategorie">FILTER BY:</h2>
+        <h3 class="filterForm__labelCategorie">MODEL</h3>
+
+        <div class="filterForm__container">
+
+          <label class="filterForm__label">
+            <input class="filterForm__checkbox" type="radio" name="filterBy" id="">
+            <div class="filterForm__title checkedFilter">
+              <p>Air Jordan I</p>
+            </div>
+          </label>
+        </div>
+
+        <div class="filterForm__container">
+
+          <label class="filterForm__label">
+            <input class="filterForm__checkbox" type="radio" name="filterBy" id="">
+            <div class="filterForm__title checkedFilter">
+              <p>Air Jordan III</p>
+            </div>
+          </label>
+        </div>
+
+        <div class="filterForm__container">
+
+          <label class="filterForm__label">
+            <input class="filterForm__checkbox" type="radio" name="filterBy" id="">
+            <div class="filterForm__title checkedFilter">
+              <p>Air Jordan IV</p>
+            </div>
+          </label>
+        </div>
+
+        <div class="filterForm__container">
+
+          <label class="filterForm__label">
+            <input class="filterForm__checkbox" type="radio" name="filterBy" id="">
+            <div class="filterForm__title checkedFilter">
+              <p>Air Jordan v</p>
+            </div>
+          </label>
+        </div>
+
+        <h3 class="filterForm__labelCategorie">COLOR</h3>
+
+        <div class="checkboxColorContainer">
+          <div class="checkboxColorContainer__container">
+              <label class="checkboxColorContainer__label">
+                  <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--red"
+                      type="checkbox" name="red" id="">
+                  <div class="checkboxColorContainer__title checked--red">
+                      <p>RED</p>
+                  </div>
+              </label>
+          </div>
+          <div class="checkboxColorContainer__container">
+              <label class="checkboxColorContainer__label">
+                  <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--blue"
+                      type="checkbox" name="blue" id="">
+                  <div class="checkboxColorContainer__title checked--blue">
+                      <p>BLUE</p>
+                  </div>
+              </label>
+          </div>
+          <div class="checkboxColorContainer__container">
+              <label class="checkboxColorContainer__label">
+                  <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--black"
+                      type="checkbox" name="black" id="">
+                  <div class="checkboxColorContainer__title checked--black">
+                      <p>BLACK</p>
+                  </div>
+              </label>
+          </div>
+          <div class="checkboxColorContainer__container">
+              <label class="checkboxColorContainer__label">
+                  <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--white"
+                      type="checkbox" name="white" id="">
+                  <div class="checkboxColorContainer__title checked--white">
+                      <p>WHITE</p>
+                  </div>
+              </label>
+          </div>
+          <div class="checkboxColorContainer__container">
+              <label class="checkboxColorContainer__label">
+                  <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--grey"
+                      type="checkbox" name="grey" id="">
+                  <div class="checkboxColorContainer__title checked--grey">
+                      <p>GREY</p>
+                  </div>
+              </label>
+          </div>
+          <div class="checkboxColorContainer__container">
+              <label class="checkboxColorContainer__label">
+                  <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--gold"
+                      type="checkbox" name="gold" id="">
+                  <div class="checkboxColorContainer__title checked--gold">
+                      <p>GOLD</p>
+                  </div>
+              </label>
+          </div>
+
+          <!---     Try-->
+          
+          <div class="priceFilter__priceContainer">
+            <h3 class="filterForm__labelCategorie">RANGE PRICE</h3>
+            <label class="priceFilter__priceLabel">
+              MIN PRICE:
+              <input class="priceFilter__priceInput" type="number" placeholder="$0">
+            </label>
+            <label class="priceFilter__priceLabel">
+              MIN PRICE:
+              <input class="priceFilter__priceInput" type="number" placeholder="$1000">
+            </label>
+          </div>
+           <!---     Try-->
+
+      </form>
+
+      
+    </aside>
+
+
+    <section class="productList">
+
+      <div class="productCard">
+        <div class="productCard__img">
+          <img src="./resources/newReleases/travisScoot-1.jpg" alt="" class="productCard__image">
+        </div>
+        <div class="productCard__info">
+          <p class="productCard__model">JORDAN RETRO III</p>
+          <h2 class="productCard__name">TRUE BLUE</h2>
+          <h3 class="productCard__price">$229.00</h3>
+        </div>
+      </div>
+
+      <div class="productCard">
+        <div class="productCard__img">
+          <img src="./resources/newReleases/travisScoot-1.jpg" alt="" class="productCard__image">
+        </div>
+        <div class="productCard__info">
+          <p class="productCard__model">JORDAN RETRO III</p>
+          <h2 class="productCard__name">TRUE BLUE</h2>
+          <h3 class="productCard__price">$229.00</h3>
+        </div>
+      </div>
+
+      <div class="productCard">
+        <div class="productCard__img">
+          <img src="./resources/newReleases/travisScoot-1.jpg" alt="" class="productCard__image">
+        </div>
+        <div class="productCard__info">
+          <p class="productCard__model">JORDAN RETRO III</p>
+          <h2 class="productCard__name">TRUE BLUE</h2>
+          <h3 class="productCard__price">$229.00</h3>
+        </div>
+      </div>
+
+      <div class="productCard">
+        <div class="productCard__img">
+          <img src="./resources/newReleases/travisScoot-1.jpg" alt="" class="productCard__image">
+        </div>
+        <div class="productCard__info">
+          <p class="productCard__model">JORDAN RETRO III</p>
+          <h2 class="productCard__name">TRUE BLUE</h2>
+          <h3 class="productCard__price">$229.00</h3>
+        </div>
+      </div>
+
+      <div class="productCard">
+        <div class="productCard__img">
+          <img src="./resources/newReleases/travisScoot-1.jpg" alt="" class="productCard__image">
+        </div>
+        <div class="productCard__info">
+          <p class="productCard__model">JORDAN RETRO III</p>
+          <h2 class="productCard__name">TRUE BLUE</h2>
+          <h3 class="productCard__price">$229.00</h3>
+        </div>
+      </div>
+
+      <div class="productCard">
+        <div class="productCard__img">
+          <img src="./resources/newReleases/travisScoot-1.jpg" alt="" class="productCard__image">
+        </div>
+        <div class="productCard__info">
+          <p class="productCard__model">JORDAN RETRO III</p>
+          <h2 class="productCard__name">TRUE BLUE</h2>
+          <h3 class="productCard__price">$229.00</h3>
+        </div>
+      </div>
+
     </section>
+  </div>
+  <footer>
+
+  </footer>
 </body>
+<script src="./scripts/products.js"></script>
+<script src="./scripts/header.js"></script>
+<script src="./scripts/footer.js"></script>
+
 </html>

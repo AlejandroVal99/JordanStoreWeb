@@ -1,0 +1,160 @@
+
+
+.products{
+    position: relative;
+    
+    &__header{
+        display:flex;
+        justify-content: space-between;
+        padding:0px 16px;
+        margin: 24px 0px;
+    }
+    &__title{
+        background:var(--main-red);
+        -webkit-background-clip: text;
+        -webkit-text-stroke: 4px transparent;
+        color:var(--second-white);
+        font-size: 90px;
+        
+    }
+    &__layout{
+        display: flex;
+    }
+    &__btnFilters{
+        border: 2px solid black;
+        padding: 6px 8px;
+        height: fit-content;
+        align-self: flex-end;
+        margin-bottom: 20px;
+    }
+}
+
+.productList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 1%;
+    margin-top: 24px;
+
+    
+}
+
+.productCard:last-child{
+    border: 2px solid red;
+    
+}
+.filterSort{
+    width: 25%;
+    
+}
+body{
+    background: var(--second-white);
+}
+
+.sortForm {
+    
+
+    &__container {
+        position: relative;
+        text-align: center;
+        width: 80%;
+        height: 40px;
+        margin-bottom: 8px;
+        margin: 4px auto;
+
+    }
+   
+
+    &__label {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__title {
+        user-select: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        border: 1px solid var(--main-black);
+    }
+
+    &__checkbox {
+        position: absolute;
+        cursor: pointer;
+        z-index: 1;
+        opacity: 0;
+
+    }
+  
+    &__checkbox:checked~.checkedSort {
+        background:var(--main-black);
+        color: var(--main-white);
+    }
+}
+
+.filterForm {
+    width: 100%;
+
+    &__container {
+        position: relative;
+        text-align: center;
+        width: 80%;
+        height: 40px;
+        margin-bottom: 8px;
+        margin: 4px auto;
+
+    }
+   
+
+    &__label {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__title {
+        user-select: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        border: 1px solid var(--main-black);
+    }
+
+    &__checkbox {
+        position: absolute;
+        cursor: pointer;
+        z-index: 1;
+        opacity: 0;
+
+    }
+  
+    &__checkbox:checked~.checkedFilter {
+        background:var(--main-black);
+        color: var(--main-white);
+    }
+
+   
+}
+.priceFilter{
+    &__priceContainer{
+        border:1px solid red;
+        width: 100%;
+    }
+    &__priceLabel{
+        display: block;
+        margin-top: 16px;
+    }
+    &__priceInput{
+        border: 1px black solid;
+        background: var(--second-white);
+        width: 50%;
+        height: 30px;
+    }
+}
