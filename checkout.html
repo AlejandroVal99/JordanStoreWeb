@@ -1,12 +1,111 @@
  <!DOCTYPE html>
  <html lang="en">
+
  <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Checkout</title>
+   <link rel="stylesheet" href="../style/index.css">
  </head>
+
  <body>
-     
+   <header></header>
+   <section class="checkout">
+     <h1 class="checkout__title">CHECKOUT</h1>
+     <div class="checkout__layout">
+       <div class="checkout__formContainer">
+
+         <form class="checkout__form">
+           <h2 class="checkout__formTitle">COMPLETE INFORMATION</h2>
+           <div class="checkout__containerName">
+             <label class="checkout__labelName" for="">
+               Name
+               <input class="checkout__input" name="name" type="text" placeholder="Michael">
+             </label>
+             <label class="checkout__labelName" for="lastname">
+               Lastname
+               <input class="checkout__input" name="lastname" type="text" placeholder="Jordan">
+             </label>
+           </div>
+           <label for="" class="checkout__label">Address</label>
+           <input class="checkout__input" type="text" placeholder="Address" name="address">
+           <label for="" class="checkout__label">ZIP Code</label>
+           <input class="checkout__input" type="text" placeholder="ZIP code" name="zipCode">
+           <label for="" class="checkout__label">City</label>
+           <input class="checkout__input" type="text" placeholder="Chicago" name="city">
+           <label for="" class="checkout__label">Phone</label>
+           <input class="checkout__input" type="text" placeholder="XXX-XXXX-XXXX" name="phone">
+
+           <h2 class="checkout__shippingTitle">SHIPPING METHOD</h2>
+
+           <div class="checkoutInput__container">
+
+             <label class="checkoutInput__label">
+               <input class="checkoutInput__checkbox" type="radio" name="orderBy" id="">
+               <div class="checkoutInput__title checkedSort">
+                 <p class="checkoutInput__normalDate">Normal</p>
+                 <p>FREE</p>
+               </div>
+             </label>
+           </div>
+
+           <div class="checkoutInput__container">
+             <label class="checkoutInput__label">
+               <input class="checkoutInput__checkbox" type="radio" name="orderBy" id="">
+               <div class="checkoutInput__title checkedSort">
+                 <p class="checkoutInput__fastDate">Fast</p>
+                 <p>$32.0</p>
+               </div>
+             </label>
+           </div>
+
+         </form>
+       </div>
+       <section class="checkout__summary">
+         <div class="checkout__summaryProducts">
+           <h1 class="checkout__summaryTitle">
+             ORDER SUMMARY
+           </h1>
+           <div class="checkout__summaryList">
+            <div class="checkoutCard">
+              <div class="checkoutCard__img">
+                <img src="./resources/newReleases/travisScoot-1.jpg" alt="" class="checkoutCard__image">
+              </div>
+              <div class="checkoutCard__info">
+                <p class="checkoutCard__name">TRAVIS SCOOT</p>
+                <h2 class="checkoutCard__size">SIZE 11.0</h2>
+                <h3 class="checkoutCard__price">$229.00</h3>
+              </div>
+            </div>
+           </div>
+         </div>
+         <div class="checkout__summaryInfo">
+
+           <div class="checkout__subtotal">
+             <p>SUBTOTAL</p>
+             <p class="checkout__totalProducts">$470.00</p>
+           </div>
+           <div class="checkout__shipping">
+             <p>SHIPPING</p>
+             <p class="checkout__shippingCost">...</p>
+           </div>
+           <div class="checkout__containerTotal">
+             <p> TOTAL</p>
+             <p class="checkout__total">$470.00</p>
+           </div>
+           <button class="checkout__btnConfirm">
+             CONFIRM
+           </button>
+         </div>
+       </section>
+     </div>
+   </section>
+
+
+   <footer></footer>
  </body>
+ <script src="./scripts/header.js"></script>
+ <script src="./scripts/footer.js"></script>
+
  </html>

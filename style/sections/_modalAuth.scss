@@ -1,0 +1,81 @@
+.modalAuth{
+    
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(#F8F8F8, $alpha: 0.4);
+    z-index: 100;
+    border: 1px solid red;
+  
+    &__logo{
+        width:25%
+    }
+    &__label{
+        display: flex;
+        flex-direction: column;
+        
+        margin-top: 16px;
+        font-weight: lighter;
+        
+        
+    }
+    &__container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--second-white);
+        background: var(--main-black);
+        width: 35%;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 25px;
+        padding-top: 15px;
+       
+    }
+    &__registerForm{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        display: none;
+    }
+    &__loginForm{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      
+
+    }
+    &__goTo{
+        font-size: 12px;
+        margin-top: 8px;
+    }
+    &__goTo:hover{
+        text-decoration: underline;
+    }
+    &__title{
+        text-align: center;
+        font-size: 24px;
+    }
+    &__input{
+        color: var(--main-white);
+        padding: 12px;
+        border: 1px solid var(--main-white);
+        background: var(--main-black);
+        margin-top: 8px;
+    }
+    &__btn{
+        background: var(--main-white);
+        color: var(--main-black);
+        font-size: 24px;
+        padding: 12px;
+        margin-top: 24px;
+    }
+  
+}

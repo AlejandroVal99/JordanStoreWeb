@@ -33,7 +33,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding-left: 1%;
+    padding: 0 0.8%;
     margin-top: 24px;
 
     
@@ -45,116 +45,35 @@
 }
 .filterSort{
     width: 25%;
+    padding: 1%;
     
 }
+
+
 body{
     background: var(--second-white);
 }
-
-.sortForm {
-    
-
-    &__container {
-        position: relative;
-        text-align: center;
-        width: 80%;
-        height: 40px;
-        margin-bottom: 8px;
-        margin: 4px auto;
-
+@media (max-width:678px){
+    .products{
+        
+        
+        &__header{
+            flex-direction: column;
+            margin-bottom: 0px;
+        }
+        &__title{
+            font-size: 70px;
+        }
+        &__btnFilters{
+            width: 100%;
+            margin-bottom: 0px;
+        }
     }
-   
-
-    &__label {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-
-    &__title {
-        user-select: none;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        justify-content: center;
-        border: 1px solid var(--main-black);
-    }
-
-    &__checkbox {
-        position: absolute;
-        cursor: pointer;
-        z-index: 1;
-        opacity: 0;
-
-    }
-  
-    &__checkbox:checked~.checkedSort {
-        background:var(--main-black);
-        color: var(--main-white);
+}
+@media (max-width:600px){
+    .productList{
+       width: 100% !important;
+        
     }
 }
 
-.filterForm {
-    width: 100%;
-
-    &__container {
-        position: relative;
-        text-align: center;
-        width: 80%;
-        height: 40px;
-        margin-bottom: 8px;
-        margin: 4px auto;
-
-    }
-   
-
-    &__label {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-
-    &__title {
-        user-select: none;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        justify-content: center;
-        border: 1px solid var(--main-black);
-    }
-
-    &__checkbox {
-        position: absolute;
-        cursor: pointer;
-        z-index: 1;
-        opacity: 0;
-
-    }
-  
-    &__checkbox:checked~.checkedFilter {
-        background:var(--main-black);
-        color: var(--main-white);
-    }
-
-   
-}
-.priceFilter{
-    &__priceContainer{
-        border:1px solid red;
-        width: 100%;
-    }
-    &__priceLabel{
-        display: block;
-        margin-top: 16px;
-    }
-    &__priceInput{
-        border: 1px black solid;
-        background: var(--second-white);
-        width: 50%;
-        height: 30px;
-    }
-}

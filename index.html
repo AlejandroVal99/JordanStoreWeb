@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="../../style/index.css">
 </head>
+
 <body>
     <header>
     </header>
@@ -17,11 +19,11 @@
                 <h1 class="heroMobile__title heroMobile__title--1">AIR</h1>
             </div>
             <div>
-                
 
-            <img class="heroMobile__img" src="./resources/hero/imgHero--Mobile.png" alt="">
-            <h1 class="heroMobile__title heroMobile__title--2">JOR</h1>
-            </div>  
+
+                <img class="heroMobile__img" src="./resources/hero/imgHero--Mobile.png" alt="">
+                <h1 class="heroMobile__title heroMobile__title--2">JOR</h1>
+            </div>
             <div>
                 <h1 class="heroMobile__title heroMobile__title--3">DAN</h1>
             </div>
@@ -37,8 +39,8 @@
             </div>
             <div>
                 <h1 class="heroDesktop__title heroDesktop__title--2">JORDAN</h1>
-            </div>  
-            
+            </div>
+
             <img class="heroDesktop__img heroDesktop__img--1 " src="./resources/hero/imgHero--Mobile.png" alt="">
             <img class="heroDesktop__img heroDesktop__img--2" src="./resources/hero/imgHero--Mobile.png" alt="">
 
@@ -102,7 +104,7 @@
         </div>
     </section>
 
-    <!--Newsletter--> 
+    <!--Newsletter-->
     <section id="suscribe_section" class="newsletter">
 
         <H1 class="newsletter__title">NEWSLETTER</H1>
@@ -112,11 +114,58 @@
         <button href="#" class="newsletter__buttonSubs">SUSCRIBE</button>
 
     </section>
+    <section class="modalAuth">
+        <div class="modalAuth__container">
+            <img class="modalAuth__btnCloseModal" src="./resources/icons/x-icon.png" alt="">
+            <img class="modalAuth__logo" src="./resources/icons/jordan-icon-big.png" alt="">
+            <form action="" class="modalAuth__registerForm">
+                <h1 class="modalAuth__title">REGISTER</h1>
+                <label class="modalAuth__label">
+                    Full name
+                    <input type="text" placeholder="Michael Jordan" class="modalAuth__input">
+                </label>
 
+                <label class="modalAuth__label">
+                    Email
+                    <input type="text" placeholder ='michael@jordan.com' class="modalAuth__input">
+                </label>
+
+                <label class="modalAuth__label">
+                    Password
+                    <input type="text" placeholder="password" class="modalAuth__input">
+                </label>
+
+                <label class="modalAuth__label">
+                    Confirm Password
+                    <input type="text" placeholder="password" class="modalAuth__input">
+                </label>
+                <span class="modalAuth__goLogin modalAuth__goTo">Don’t have an account? Sign up</span>
+                <button type= "submit" modalAuth__btn btnRegister"></button>
+            </form>
+
+            <form action="" class="modalAuth__loginForm">
+                <h1 class="modalAuth__title">LOG IN</h1>
+                <label class="modalAuth__label">
+                    EMAIL
+                    <input placeholder ='michael@jordan.com' type="text" class="modalAuth__input">
+                </label>
+
+                <label class="modalAuth__label">
+                    PASSWORD
+                    <input placeholder="password" type="text" class="modalAuth__input">
+                </label>
+                <span class="modalAuth__goRegister modalAuth__goTo">Already have account? Login</span>
+                <button type= "submit" class="modalAuth__btn btnLogin">LOG IN</button>
+            </form>
+        </div>
+
+    </section>
     <footer>
     </footer>
 </body>
+
 <script src="./scripts/header.js"></script>
-<script src = "./scripts/footer.js"></script>
+<script src="./scripts/footer.js"></script>
+<script src="./scripts/authModal.js"></script>
 
 </html>

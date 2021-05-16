@@ -10,7 +10,7 @@ $header.innerHTML=`
     <a href="">New Releases</a>
     <a href="">Products</a>
     <a href="">My Cart</a>
-    <a href="" class="header__login">Log in</a>
+    <a  class="header__login btnOpenModal">Log in</a>
 
 </nav>
 <img class="header__iconMobile" src="../../resources/icons/burgermenu-icon.png" alt="">
@@ -46,5 +46,3 @@ function handle_iconNavBar() {
 }
 
 $icon_navBar.addEventListener('click', handle_iconNavBar);
-console.log($navBar);
-console.log($icon_navBar);

@@ -1,6 +1,6 @@
 .myCartProductCard{
     width: 95%;
-    border: 2px solid var(--main-black);
+    border: 1px solid var(--main-black);
     margin-bottom: 16px;
     background: var(--second-white);
     &__productContainer{
@@ -15,7 +15,7 @@
     &__containerInfo{
         width: 100%;
         border-top: 2px solid var(--main-black);
-        border-bottom: 2px solid var(--main-black);
+        border-bottom: 1px solid var(--main-black);
         display: flex;
         flex-direction: column;
         padding: 8px;

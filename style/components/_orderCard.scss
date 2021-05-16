@@ -1,0 +1,32 @@
+.orderCard{
+    border: 1px solid black;
+    width:49%;
+    margin-bottom: 2%;
+    padding: 1.5%;
+
+    &__userInfo{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 4%;
+    }
+    &__id{
+        font-weight: bold;
+        font-size: 20px;
+        
+    }
+    &__price{
+        align-self: flex-end;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    &__nProducts{
+        font-size: 14px;
+    }
+}
+@media(max-width:550px){
+    .orderCard{
+        margin-bottom: 4%;
+        border: 1px solid black;
+        width:100%;
+    }
+}
