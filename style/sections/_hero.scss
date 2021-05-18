@@ -20,7 +20,7 @@
         position: relative;
         color: var(--main-white);
         font-size: 140px;
-        
+        user-select: none;
         &--background{
             position: absolute;
            font-size: 4000%;

@@ -25,6 +25,7 @@
     &__name{
         //font-weight: bold;
         font-size: 24px;
+        text-transform: uppercase;
     }
     &__model{
         color: var(--second-red);
@@ -35,8 +36,40 @@
     }
 
 }
+.productCard:hover{
+    outline: 1px solid var(--main-black);
+    cursor: pointer;
+}
 @media (max-width:825px){
     .productCard{
          width: 49%;
+
+         &__name{
+            //font-weight: bold;
+            font-size: 18px;
+            text-transform: uppercase;
+            margin: 4px 0;
+        }
+        &__price{
+            font-size: 14px;
+        }
     }
+}
+
+@media (max-width:400px){
+    
+    
+    .productCard{
+      
+
+        &__name{
+           //font-weight: bold;
+           font-size: 16px;
+           text-transform: uppercase;
+       }
+
+       &__price{
+        font-size: 12px;
+    }
+   }
 }

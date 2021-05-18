@@ -1,7 +1,7 @@
 const $productForm = document.querySelector('.productForm__form');
 const $imagesContainer = document.querySelector('.productForm__imagesContainer');
 
-const imagesFiles = [];
+let imagesFiles = [];
 
 $productForm.images.addEventListener('change', function () {
     let file = $productForm.images.files[0];
@@ -14,9 +14,27 @@ $productForm.images.addEventListener('change', function () {
     }
     reader.readAsDataURL(file);
     imagesFiles.push(file);
-    console.log($productForm.images.files);
+   
 });
 
+function cleanForm(){
+    $productForm.name.value = '';
+    $productForm.price.value = '';
+    $productForm.description.value = '';
+    $productForm.model.value = '';
+    $productForm.year.value = '';
+    
+    $productForm.color.forEach(element => {
+        element.checked = false;
+    });
+
+    $productForm.size.forEach(element => {
+        element.checked = false;
+    });
+    $productForm.images.value='';
+    $imagesContainer.innerHTML='';
+    imagesFiles=[];
+} 
 
 $productForm.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -26,7 +44,8 @@ $productForm.addEventListener('submit', function (event) {
         price: parseInt($productForm.price.value),
         description: $productForm.description.value,
         model: $productForm.model.value,
-        year: $productForm.year.value
+        year: $productForm.year.value,
+        newReleases: $productForm.newReleases.value,
     }
     product.colors = [];
 
@@ -44,18 +63,21 @@ $productForm.addEventListener('submit', function (event) {
             product.sizes.push(sizeInfo);
         }
     });
-
+    console.log($productForm);
+    
+    //Feedback of loader right here
+   
     db.collection('products').add(product)
         .then((docRef) => {
 
-            const  imgUploadPromises = [];
+            const imgUploadPromises = [];
             const imgDownloadUrlPromises = [];
 
             imagesFiles.forEach(function (file) {
 
                 let modelImgPath = product.model;
                 let idProductImg = docRef.id;
-                let fileNamePath = fiel.name;
+                let fileNamePath = file.name;
 
                 const storageRef = firebase.storage().ref();
                 const imageRef = storageRef.child(`products/${modelImgPath}/${idProductImg}/${fileNamePath}`);
@@ -63,27 +85,45 @@ $productForm.addEventListener('submit', function (event) {
                 imgUploadPromises.push(imageRef.put(file));
             });
 
-            Promise.all(imgUploadPromises).then(function(){
-                
-            })
+            Promise.all(imgUploadPromises).then((snapshots) => {
+                //URL de descarga
 
-            /* 
-                .then(function (downloadURL) {
-                        product.imgeUrl = downloadURL;
-                        product.imgRef = snapshot.ref.fullPath;
+                snapshots.forEach(function (snapshot) {
 
-                    }); 
-            */
+                    imgDownloadUrlPromises.push(snapshot.ref.getDownloadURL());
+
+                })
+
+                Promise.all(imgDownloadUrlPromises).then(function (downloadURLs) {
+
+                    const images = [];
+
+                    downloadURLs.forEach(function (downloadURL, index) {
+                        const imgInfo = {
+                            imgURL : downloadURL,
+                            imgRef : snapshots[index].ref.fullPath,
+                        }
+
+                        images.push(imgInfo);
+                    });
+
+                    console.log(downloadURLs);
+
+                    db.collection('products').doc(docRef.id).update({
+                        images: images,
+                    }).then(function () {
+                        //End process feedback here
+                        console.log("creates products ready");
+                        cleanForm();
+                    });
+                });
+            });
         })
         .catch((error) => {
             console.log(error);
         })
 
-    console.log(imagesFiles);
+    ;
 
-    return;
-
-
-
-
+   
 });

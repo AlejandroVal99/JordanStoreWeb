@@ -143,6 +143,10 @@
             }
         }
     }
+    .filterSort--mobile{
+        display:none;
+    }
+   
 }
 @media (max-width:600px){
     .filterSort{
@@ -161,5 +165,7 @@
        top:0;
        left: 0;
        padding: 20px 1.5%;
+    z-index: 2;
+
    }
 }

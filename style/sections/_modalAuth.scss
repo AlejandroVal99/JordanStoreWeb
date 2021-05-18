@@ -9,12 +9,13 @@
     border: 1px solid red;
   
     &__logo{
-        width:25%
+        width:25%;
+        margin-bottom: 24px;
     }
     &__label{
         display: flex;
         flex-direction: column;
-        
+        font-size: 14px;
         margin-top: 16px;
         font-weight: lighter;
         
@@ -27,7 +28,7 @@
         transform: translate(-50%, -50%);
         color: var(--second-white);
         background: var(--main-black);
-        width: 35%;
+        width: 30%;
         
         display: flex;
         flex-direction: column;
@@ -38,14 +39,14 @@
        
     }
     &__registerForm{
-        width: 80%;
+        width: 90%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         display: none;
     }
     &__loginForm{
-        width: 80%;
+        width: 90%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -55,6 +56,7 @@
     &__goTo{
         font-size: 12px;
         margin-top: 8px;
+        cursor: pointer;
     }
     &__goTo:hover{
         text-decoration: underline;
@@ -74,8 +76,15 @@
         background: var(--main-white);
         color: var(--main-black);
         font-size: 24px;
-        padding: 12px;
+        padding: 8px;
         margin-top: 24px;
+    }
+    &__btnCloseModal{
+        position: absolute;
+        width: 5%;
+        right: 8px;
+        top: 8px;
+        cursor: pointer;
     }
   
 }

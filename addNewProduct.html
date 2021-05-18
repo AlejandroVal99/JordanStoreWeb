@@ -21,7 +21,7 @@
                 <div class="productForm__col">
 
 
-                    <label class="productForm__label" for="" >NAME</label>
+                    <label class="productForm__label" for="">NAME</label>
                     <input type="text" name="name" class="productForm__textField">
                     <label class="productForm__label">SELECT MODEL</label>
                     <select class="productForm__selectModel" name="model">
@@ -41,18 +41,25 @@
                     <label class="productForm__label" for="">YEAR</label>
                     <input type="text" name="year" class="productForm__textField">
 
+                    <label class="productForm__label">New Releases</label>
+                    <select class="productForm__selectModel" name="newReleases">
+
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                    </select>
+
                 </div>
-                <div class="productForm__col">
+                <div class="productForm__col space">
                     <div class="productForm__imagesContainer"></div>
-                   
-                   <input accept=".jpg"  type="file" name="images" id="" class="productForm__inputFiel">
+
+                    <input accept=".jpg" multiple type="file" name="images" id="" class="productForm__inputFiel">
 
                     <label class="productForm__label" for="">COLORS</label>
                     <div class="checkboxColorContainer">
                         <div class="checkboxColorContainer__container">
                             <label class="checkboxColorContainer__label">
                                 <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--red"
-                                    type="checkbox" data-color = "red" name="color" id="">
+                                    type="checkbox" data-color="red" name="color" id="">
                                 <div class="checkboxColorContainer__title checked--red">
                                     <p>RED</p>
                                 </div>
@@ -61,7 +68,7 @@
                         <div class="checkboxColorContainer__container">
                             <label class="checkboxColorContainer__label">
                                 <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--blue"
-                                    type="checkbox" data-color = "blue" name="color" id="">
+                                    type="checkbox" data-color="blue" name="color" id="">
                                 <div class="checkboxColorContainer__title checked--blue">
                                     <p>BLUE</p>
                                 </div>
@@ -79,7 +86,7 @@
                         <div class="checkboxColorContainer__container">
                             <label class="checkboxColorContainer__label">
                                 <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--white"
-                                    type="checkbox" data-color ="white" name="color" id="">
+                                    type="checkbox" data-color="white" name="color" id="">
                                 <div class="checkboxColorContainer__title checked--white">
                                     <p>WHITE</p>
                                 </div>
@@ -88,7 +95,7 @@
                         <div class="checkboxColorContainer__container">
                             <label class="checkboxColorContainer__label">
                                 <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--grey"
-                                    type="checkbox" data-color = "grey" name="color" id="">
+                                    type="checkbox" data-color="grey" name="color" id="">
                                 <div class="checkboxColorContainer__title checked--grey">
                                     <p>GREY</p>
                                 </div>
@@ -105,6 +112,7 @@
                         </div>
 
 
+
                     </div>
 
                     <label class="productForm__label" for="">SIZES</label>
@@ -112,7 +120,8 @@
                         <div class="checkboxSizeContainer__container">
 
                             <label class="checkboxSizeContainer__label">
-                                <input class="checkboxSizeContainer__checkbox" data-size="8.0"  type="checkbox" name="size" id="">
+                                <input class="checkboxSizeContainer__checkbox" data-size="8.0" type="checkbox"
+                                    name="size" id="">
                                 <div class="checkboxSizeContainer__title checkedSize">
                                     <p>8.0</p>
                                 </div>
@@ -121,7 +130,8 @@
 
                         <div class="checkboxSizeContainer__container">
                             <label class="checkboxSizeContainer__label">
-                                <input class="checkboxSizeContainer__checkbox" data-size="8.5"  type="checkbox" name="size" id="">
+                                <input class="checkboxSizeContainer__checkbox" data-size="8.5" type="checkbox"
+                                    name="size" id="">
                                 <div class="checkboxSizeContainer__title checkedSize">
                                     <p>8.5</p>
                                 </div>
@@ -130,7 +140,8 @@
 
                         <div class="checkboxSizeContainer__container">
                             <label class="checkboxSizeContainer__label">
-                                <input class="checkboxSizeContainer__checkbox" data-size="9.0"  type="checkbox" name="size" id="">
+                                <input class="checkboxSizeContainer__checkbox" data-size="9.0" type="checkbox"
+                                    name="size" id="">
                                 <div class="checkboxSizeContainer__title checkedSize">
                                     <p>9.0</p>
                                 </div>
@@ -138,7 +149,8 @@
                         </div>
                         <div class="checkboxSizeContainer__container">
                             <label class="checkboxSizeContainer__label">
-                                <input class="checkboxSizeContainer__checkbox" data-size="9.5"  type="checkbox" name="size" id="">
+                                <input class="checkboxSizeContainer__checkbox" data-size="9.5" type="checkbox"
+                                    name="size" id="">
                                 <div class="checkboxSizeContainer__title checkedSize">
                                     <p>9.5</p>
                                 </div>
@@ -146,7 +158,8 @@
                         </div>
                         <div class="checkboxSizeContainer__container">
                             <label class="checkboxSizeContainer__label">
-                                <input class="checkboxSizeContainer__checkbox" data-size="10.0" type="checkbox" name="size" id="">
+                                <input class="checkboxSizeContainer__checkbox" data-size="10.0" type="checkbox"
+                                    name="size" id="">
                                 <div class="checkboxSizeContainer__title checkedSize">
                                     <p>10.0</p>
                                 </div>
@@ -155,7 +168,8 @@
 
                         <div class="checkboxSizeContainer__container">
                             <label class="checkboxSizeContainer__label">
-                                <input class="checkboxSizeContainer__checkbox" data-size="10.5" type="checkbox" name="size" id="">
+                                <input class="checkboxSizeContainer__checkbox" data-size="10.5" type="checkbox"
+                                    name="size" id="">
                                 <div class="checkboxSizeContainer__title checkedSize">
                                     <p>10.5</p>
                                 </div>
@@ -164,7 +178,8 @@
 
                         <div class="checkboxSizeContainer__container">
                             <label class="checkboxSizeContainer__label">
-                                <input class="checkboxSizeContainer__checkbox" data-size="11.0" type="checkbox" name="size" id="">
+                                <input class="checkboxSizeContainer__checkbox" data-size="11.0" type="checkbox"
+                                    name="size" id="">
                                 <div class="checkboxSizeContainer__title checkedSize">
                                     <p>11.0</p>
                                 </div>
@@ -173,7 +188,8 @@
 
                         <div class="checkboxSizeContainer__container last">
                             <label class="checkboxSizeContainer__label">
-                                <input class="checkboxSizeContainer__checkbox" data-size="11.5" type="checkbox" name="size" id="">
+                                <input class="checkboxSizeContainer__checkbox" data-size="11.5" type="checkbox"
+                                    name="size" id="">
                                 <div class="checkboxSizeContainer__title checkedSize">
                                     <p>11.5</p>
                                 </div>
@@ -181,13 +197,15 @@
                         </div>
                         <div class="checkboxSizeContainer__container last">
                             <label class="checkboxSizeContainer__label">
-                                <input class="checkboxSizeContainer__checkbox" data-size="12.0" type="checkbox" name="size" id="">
+                                <input class="checkboxSizeContainer__checkbox" data-size="12.0" type="checkbox"
+                                    name="size" id="">
                                 <div class="checkboxSizeContainer__title checkedSize">
                                     <p>12.0</p>
                                 </div>
                             </label>
                         </div>
                     </div>
+
 
 
                 </div>

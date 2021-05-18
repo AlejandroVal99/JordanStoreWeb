@@ -33,7 +33,11 @@
         padding: 0 3rem;
     }
     
+    &__col:last-child{
+        
+        justify-content: space-between;
 
+    }
     &__label {
         margin-top: 16px;
     }
@@ -107,6 +111,7 @@
             object-fit: cover;
         }
     }
+    
 }
 
 .checkboxColorContainer {
