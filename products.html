@@ -26,8 +26,8 @@
 
     <aside class="filterSort">
 
-      <form action="" class="sortForm">
-        
+      <form action="" class="filterForm">
+
         <h2 class="sortForm__titleCategorie">SORT BY:</h2>
 
         <div class="sortForm__container">
@@ -58,9 +58,7 @@
           </label>
         </div>
 
-      </form>
-
-      <form action="" class="filterForm">
+      
         <h2 class="filterForm__titleCategorie">FILTER BY:</h2>
         <h3 class="filterForm__labelCategorie">MODEL</h3>
 
@@ -87,7 +85,7 @@
         <div class="filterForm__container">
 
           <label class="filterForm__label">
-            <input class="filterForm__checkbox" type="checkbox"  data-model="Air Jordan IV" name="filterByModel" id="">
+            <input class="filterForm__checkbox" type="checkbox" data-model="Air Jordan IV" name="filterByModel" id="">
             <div class="filterForm__title checkedFilter">
               <p>Air Jordan IV</p>
             </div>
@@ -97,9 +95,9 @@
         <div class="filterForm__container">
 
           <label class="filterForm__label">
-            <input class="filterForm__checkbox" type="checkbox" data-model="Air Jordan V" name="filterByMobel" id="">
+            <input class="filterForm__checkbox" type="checkbox" data-model="Air Jordan V" name="filterByModel" id="">
             <div class="filterForm__title checkedFilter">
-              <p>Air Jordan v</p>
+              <p>Air Jordan V</p>
             </div>
           </label>
         </div>
@@ -108,81 +106,83 @@
 
         <div class="checkboxColorContainer">
           <div class="checkboxColorContainer__container">
-              <label class="checkboxColorContainer__label">
-                  <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--red"
-                      type="checkbox" data-color="red" name="filterByColor" id="">
-                  <div class="checkboxColorContainer__title checked--red">
-                      <p>RED</p>
-                  </div>
-              </label>
+            <label class="checkboxColorContainer__label">
+              <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--red" type="radio"
+                data-color="red" value="red" name="filterByColor" id="">
+              <div class="checkboxColorContainer__title checked--red">
+                <p>RED</p>
+              </div>
+            </label>
           </div>
           <div class="checkboxColorContainer__container">
-              <label class="checkboxColorContainer__label">
-                  <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--blue"
-                      type="checkbox" data-color="blue" name="filterByColor" id="">
-                  <div class="checkboxColorContainer__title checked--blue">
-                      <p>BLUE</p>
-                  </div>
-              </label>
+            <label class="checkboxColorContainer__label">
+              <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--blue" type="radio"
+                data-color="blue" value="blue" name="filterByColor" id="">
+              <div class="checkboxColorContainer__title checked--blue">
+                <p>BLUE</p>
+              </div>
+            </label>
           </div>
           <div class="checkboxColorContainer__container">
-              <label class="checkboxColorContainer__label">
-                  <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--black"
-                      type="checkbox" data-color="black" name="filterByColor" id="">
-                  <div class="checkboxColorContainer__title checked--black">
-                      <p>BLACK</p>
-                  </div>
-              </label>
+            <label class="checkboxColorContainer__label">
+              <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--black" type="radio"
+                data-color="black" value="black" name="filterByColor" id="">
+              <div class="checkboxColorContainer__title checked--black">
+                <p>BLACK</p>
+              </div>
+            </label>
           </div>
           <div class="checkboxColorContainer__container">
-              <label class="checkboxColorContainer__label">
-                  <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--white"
-                      type="checkbox" data-color="white" name="filterByColor" id="">
-                  <div class="checkboxColorContainer__title checked--white">
-                      <p>WHITE</p>
-                  </div>
-              </label>
+            <label class="checkboxColorContainer__label">
+              <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--white"  type="radio"
+                data-color="white" value="white" name="filterByColor" id="">
+              <div class="checkboxColorContainer__title checked--white">
+                <p>WHITE</p>
+              </div>
+            </label>
           </div>
           <div class="checkboxColorContainer__container">
-              <label class="checkboxColorContainer__label">
-                  <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--grey"
-                      type="checkbox" data-color="grey" name="filterByColor" id="">
-                  <div class="checkboxColorContainer__title checked--grey">
-                      <p>GREY</p>
-                  </div>
-              </label>
+            <label class="checkboxColorContainer__label">
+              <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--grey" defaitl type="radio"
+                data-color="grey" value="grey" name="filterByColor" id="">
+              <div class="checkboxColorContainer__title checked--grey">
+                <p>GREY</p>
+              </div>
+            </label>
           </div>
           <div class="checkboxColorContainer__container">
-              <label class="checkboxColorContainer__label">
-                  <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--gold"
-                      type="checkbox" data-color="gold" name="filterByColor" id="">
-                  <div class="checkboxColorContainer__title checked--gold">
-                      <p>GOLD</p>
-                  </div>
-              </label>
+            <label class="checkboxColorContainer__label">
+              <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--gold" type="radio"
+                data-color="gold" value="gold" name="filterByColor" id="">
+              <div class="checkboxColorContainer__title checked--gold">
+                <p>GOLD</p>
+              </div>
+            </label>
           </div>
 
           <!---     Try-->
-          
+          <h3 class="filterForm__labelCategorie">NEW RELEASES</h3>
           <div class="filterForm__container">
 
             <label class="filterForm__label">
-              <input class="filterForm__checkbox" type="checkbox" name="FilterBynewReleases" id="">
+              <input class="filterForm__checkbox" type="checkbox" name="filterBynewReleases" id="">
               <div class="filterForm__title checkedFilter">
                 <p>NEW RELEASES</p>
               </div>
             </label>
           </div>
-           <!---     Try-->
+          <!---     Try-->
 
       </form>
 
-      
+
     </aside>
 
     <aside class="filterSort--mobile">
-      <form action="" class="sortForm">
-        
+      <img class="filterSort__btnClose" src="./resources/icons/x-icon-dark.png" alt="">
+      <h1>FILTERS AND SORTS</h1>
+      <form action="" class="sortForm" id="sortFormMobile">
+
         <h2 class="sortForm__titleCategorie">SORT BY:</h2>
 
         <div class="sortForm__container">
@@ -197,7 +197,7 @@
 
         <div class="sortForm__container">
           <label class="sortForm__label">
-            <input class="sortForm__checkbox" type="checkbox"name="orderByPriceHigh" id="">
+            <input class="sortForm__checkbox" type="checkbox" name="orderByPriceHigh" id="">
             <div class="sortForm__title checkedSort">
               <p>Price: High to Low</p>
             </div>
@@ -213,16 +213,15 @@
           </label>
         </div>
 
-      </form>
-
-      <form action="" class="filterForm">
+     
         <h2 class="filterForm__titleCategorie">FILTER BY:</h2>
         <h3 class="filterForm__labelCategorie">MODEL</h3>
 
         <div class="filterForm__container">
 
           <label class="filterForm__label">
-            <input class="filterForm__checkbox" data-model="Air Jordan I" type="checkbox" name="filterByModel" name="filterBy" id="">
+            <input class="filterForm__checkbox" data-model="Air Jordan I" type="checkbox" name="filterByMode"
+               id="">
             <div class="filterForm__title checkedFilter">
               <p>Air Jordan I</p>
             </div>
@@ -232,7 +231,7 @@
         <div class="filterForm__container">
 
           <label class="filterForm__label">
-            <input class="filterForm__checkbox" data-model="Air Jordan III" type="checkbox" name="filterByModel" id="">
+            <input class="filterForm__checkbox" data-model="Air Jordan III" type="checkbox" name="filterByMode" id="">
             <div class="filterForm__title checkedFilter">
               <p>Air Jordan III</p>
             </div>
@@ -242,7 +241,7 @@
         <div class="filterForm__container">
 
           <label class="filterForm__label">
-            <input class="filterForm__checkbox" data-model="Air Jordan IV" type="checkbox" name="filterByModel" id="">
+            <input class="filterForm__checkbox" data-model="Air Jordan IV" type="checkbox" name="filterByMode" id="">
             <div class="filterForm__title checkedFilter">
               <p>Air Jordan IV</p>
             </div>
@@ -252,7 +251,7 @@
         <div class="filterForm__container">
 
           <label class="filterForm__label">
-            <input class="filterForm__checkbox" type="checkbox" data-model="Air Jordan V" name="filterByModel" id="">
+            <input class="filterForm__checkbox" type="checkbox" data-model="Air Jordan V" name="filterByMode" id="">
             <div class="filterForm__title checkedFilter">
               <p>Air Jordan v</p>
             </div>
@@ -263,80 +262,81 @@
 
         <div class="checkboxColorContainer">
           <div class="checkboxColorContainer__container">
-              <label class="checkboxColorContainer__label">
-                  <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--red"
-                      type="checkbox" data-color="red" name="filterByColor" id="">
-                  <div class="checkboxColorContainer__title checked--red">
-                      <p>RED</p>
-                  </div>
-              </label>
-          </div>
-          <div class="checkboxColorContainer__container">
-              <label class="checkboxColorContainer__label">
-                  <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--blue"
-                      type="checkbox"data-color="blue" name="filterByColor" id="">
-                  <div class="checkboxColorContainer__title checked--blue">
-                      <p>BLUE</p>
-                  </div>
-              </label>
-          </div>
-          <div class="checkboxColorContainer__container">
-              <label class="checkboxColorContainer__label">
-                  <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--black"
-                      type="checkbox" data-color="black" name="filterByColor" id="">
-                  <div class="checkboxColorContainer__title checked--black">
-                      <p>BLACK</p>
-                  </div>
-              </label>
-          </div>
-          <div class="checkboxColorContainer__container">
-              <label class="checkboxColorContainer__label">
-                  <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--white"
-                      type="checkbox" name="white" id="">
-                  <div class="checkboxColorContainer__title checked--white">
-                      <p>WHITE</p>
-                  </div>
-              </label>
-          </div>
-          <div class="checkboxColorContainer__container">
-              <label class="checkboxColorContainer__label">
-                  <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--grey"
-                      type="checkbox" name="grey" id="">
-                  <div class="checkboxColorContainer__title checked--grey">
-                      <p>GREY</p>
-                  </div>
-              </label>
-          </div>
-          <div class="checkboxColorContainer__container">
-              <label class="checkboxColorContainer__label">
-                  <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--gold"
-                      type="checkbox" name="gold" id="">
-                  <div class="checkboxColorContainer__title checked--gold">
-                      <p>GOLD</p>
-                  </div>
-              </label>
-          </div>
-
-          <!---     Try-->
-          
-          <div class="filterForm__container">
-
-            <label class="filterForm__label">
-              <input class="filterForm__checkbox" type="checkbox" name="FilterBynewReleases" id="">
-              <div class="filterForm__title checkedFilter">
-                <p>NEW RELEASES</p>
+            <label class="checkboxColorContainer__label">
+              <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--red" type="radio"
+                data-color="red" value="red" name="filterByColor" id="">
+              <div class="checkboxColorContainer__title checked--red">
+                <p>RED</p>
               </div>
             </label>
           </div>
-           <!---     Try-->
+          <div class="checkboxColorContainer__container">
+            <label class="checkboxColorContainer__label">
+              <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--blue" type="radio"
+                data-color="blue"  value="blue" name="filterByColor" id="">
+              <div class="checkboxColorContainer__title checked--blue">
+                <p>BLUE</p>
+              </div>
+            </label>
+          </div>
+          <div class="checkboxColorContainer__container">
+            <label class="checkboxColorContainer__label">
+              <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--black" type="radio"
+                data-color="black"  value="black" name="filterByColor" id="">
+              <div class="checkboxColorContainer__title checked--black">
+                <p>BLACK</p>
+              </div>
+            </label>
+          </div>
+          <div class="checkboxColorContainer__container">
+            <label class="checkboxColorContainer__label">
+              <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--white" type="radio"
+                name="filterByColor"  value="white" id="">
+              <div class="checkboxColorContainer__title checked--white">
+                <p>WHITE</p>
+              </div>
+            </label>
+          </div>
+          <div class="checkboxColorContainer__container">
+            <label class="checkboxColorContainer__label">
+              <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--grey" type="radio"
+                name="filterByColor"  value="grey" id="">
+              <div class="checkboxColorContainer__title checked--grey">
+                <p>GREY</p>
+              </div>
+            </label>
+          </div>
+          <div class="checkboxColorContainer__container">
+            <label class="checkboxColorContainer__label">
+              <input class="checkboxColorContainer__checkbox checkboxColorContainer__checkbox--gold" type="radio"
+                name="filterByColor"  value="gold" id="">
+              <div class="checkboxColorContainer__title checked--gold">
+                <p>GOLD</p>
+              </div>
+            </label>
+          </div>
+        </div>
+        <!---     Try-->
+        <h3 class="filterForm__labelCategorie">NEW RELEASES</h3>
+        <div class="filterForm__container">
+
+          <label class="filterForm__label">
+            <input class="filterForm__checkbox" type="checkbox" name="filterBynewReleases" id="">
+            <div class="filterForm__title checkedFilter">
+              <p>NEW RELEASES</p>
+            </div>
+          </label>
+        </div>
+        <!---     Try-->
 
       </form>
+      <button class="filterSort__btn btn_mobileFormSubmit">APPLY</button>
     </aside>
 
 
     <section class="productList">
 
-    
+
 
     </section>
   </div>
@@ -355,8 +355,8 @@
 
 <script src="./scripts/header.js"></script>
 <script src="./scripts/footer.js"></script>
-<script src="./scripts/authModal.js"></script>
 <script src="./scripts/general.js"></script>
+<script src="./scripts/authModal.js"></script>
 <script src="./scripts/products.js"></script>
 
 </html>
