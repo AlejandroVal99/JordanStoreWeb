@@ -63,7 +63,7 @@ const $btnCloseModal = document.querySelector('.modalAuth__btnCloseModal');
 const $btnOpenModal = document.querySelector('.btnOpenModal');
 const $btnOpenModalMob = document.querySelector('.btnOpenModalMob');
 const $btnLogOut = document.querySelector('.btnLogOut');
-
+const $btnLogOutMob = document.querySelector('.btnLogOutMob');
 
 
 $modalAuth.style.display = 'none';
@@ -163,6 +163,10 @@ $formLogIn.addEventListener('submit', function(event){
     console.log(email,password);
 })
 
-$btnLogOut.addEventListener('click', function() {
+function handle_btnLogOut(){
     firebase.auth().signOut();
-  });
+    window.location='./index.html';
+};
+
+$btnLogOut.addEventListener('click', handle_btnLogOut);
+$btnLogOutMob.addEventListener('click', handle_btnLogOut);

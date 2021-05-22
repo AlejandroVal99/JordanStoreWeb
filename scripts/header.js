@@ -11,7 +11,7 @@ $header.innerHTML = `
     <a href="./products.html?newReleases=Yes"  class="hideLoggedAdmin">New Releases</a>
     <a class="showLoggedAdmin hidden" href="./orders.html">Orders</a>
     <a href="./products.html">Products</a>
-    <a href="./myCart.html" class="hideLoggedAdmin">My Cart</a>
+    <a class="hideLoggedAdmin btnGoCard">My Cart</a>
 
     <a class="header__login btnOpenModal hideLoggedIn">Log in</a>
     <a class="header__login showLoggedIn btnLogOut">Log out</a>
@@ -25,17 +25,21 @@ $header.innerHTML = `
     <a href="./products.html?newReleases=Yes"  class="hideLoggedAdmin">New Releases</a>
     <a class="showLoggedAdmin hidden" href="./orders.html">Orders</a>
     <a href="./products.html">Products</a>
-    <a href="./myCart.html" class="hideLoggedAdmin">My Cart</a>
+    <a class="hideLoggedAdmin btnGoCardMob">My Cart</a>
 
     <a class="header__login btnOpenModalMob hideLoggedIn">Log in</a>
-    <a class="header__login showLoggedIn btnLogOut">Log out</a>
+    <a class="header__login showLoggedIn btnLogOutMob">Log out</a>
 </nav>
 `;
 
 
-$navBar = document.querySelector(".header__navBar");
-$icon_navBar = document.querySelector(".header__iconMobile");
-$navBar_mobile = document.querySelector(".header__navMobile");
+const $navBar = document.querySelector(".header__navBar");
+const $icon_navBar = document.querySelector(".header__iconMobile");
+const $navBar_mobile = document.querySelector(".header__navMobile");
+
+const $btnGoCard = document.querySelector('.btnGoCard');
+const $btnGoCardMob = document.querySelector('.btnGoCardMob');
+
 
 let isOpen = false;
 $navBar_mobile.style.display = 'none';
@@ -52,4 +56,14 @@ function handle_iconNavBar() {
     isOpen = !isOpen;
 }
 
+function handle_goToCard(){
+    console.log("Detected click");
+    if(loggedUser){
+        window.location='./myCart.html';
+    }else{
+        handle_btnOpenModal();
+    }
+};
 $icon_navBar.addEventListener('click', handle_iconNavBar);
+$btnGoCard.addEventListener('click',handle_goToCard);
+$btnGoCardMob.addEventListener('click',handle_goToCard);

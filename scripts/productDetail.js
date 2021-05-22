@@ -1,10 +1,15 @@
-console.log('hello');
+
 
 const params = new URLSearchParams(location.search);
 const productId = params.get('id');
-const $productSection = document.querySelector('.productDetail');
+/* const $productSection = document.querySelector('.productDetail');
+const $productPrice = document.querySelector('.productDetail__price');
+const $productBrand = document.querySelector('.productDetail__brand');
+const $productReference = document.querySelector('.productDetail__reference');
+const $productDescription= document.querySelector('.productDetail__description'); */
 
-console.log(params.get('id'), params.get('name'));
+
+
 if (!productId) {
     location.href = './products.html';
 }
@@ -35,7 +40,7 @@ const handleProductResult = (doc) => {
                
 
             </form>
-            <button class="productDetail__button hideLoggedAdmin" >ADD TO CART</button>
+            <button class="productDetail__button hideLoggedAdmin btnAddToCart" >ADD TO CART</button>
             <button class="productDetail__button btnEditProductDetail showLoggedAdmin hidden" >EDIT PRODUCT</button>
             <button class="productDetail__button btnDeleteProductDetail showLoggedAdmin hidden" >DELETE PRODUCT</button>
         </div>
@@ -44,8 +49,7 @@ const handleProductResult = (doc) => {
     $sizesContainer.innerHTML = '';
 
     data.sizes.forEach(size=>{
-        console.log(size);
-
+        
         const sizeCard = document.createElement('div');
         sizeCard.classList.add('sizeCard');
         sizeCard.innerHTML=`
@@ -59,18 +63,32 @@ const handleProductResult = (doc) => {
         $sizesContainer.appendChild(sizeCard);
     })
 
+    const $btnAddToCart = document.querySelector('.btnAddToCart');
+    
 
     const $mainImage = document.querySelector(".productDetail__main");
     const $otherImages = document.querySelectorAll(".productDetail__slide");
+
     $otherImages.forEach(img => {
     const handle_imgGallery = () => {
+        console.log('changeImg');
         const imgSrc = img.getAttribute('src');
         console.log(img.getAttribute('src'));
         $mainImage.setAttribute('src', imgSrc);
     }
-
     img.addEventListener('click', handle_imgGallery);
-});
+    });
+
+    $btnAddToCart.addEventListener('click',function(){
+        console.log('add to cart')
+        if(loggedUser){
+            
+        }else{
+            handle_btnOpenModal();
+        }
+    });
+
+
 
 
 };
