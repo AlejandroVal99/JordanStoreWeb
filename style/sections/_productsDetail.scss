@@ -40,9 +40,12 @@
         background: var(--main-red);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
     }
 
-    &__reference {}
+    &__reference {
+        text-transform: uppercase;
+    }
 
     &__price {
         font-size: 72px;
@@ -56,17 +59,10 @@
         display: flex;
         // border: 1px solid red;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: flex-start;
     }
 
-    &__size {
-        width: 165px;
-        height: 38px;
-        border: 1px solid var(--main-black);
-        border-radius: 4px;
-        font-size: 20px;
-        margin-top: 8px;
-    }
+    
 
     &__button {
         background-image: var(--main-red);
@@ -78,13 +74,50 @@
         font-size: 25px;
 
     }
-    &__size:focus{
-        background: var(--main-black);
-        color:var(--main-white);
+   
+
+}
+
+.sizeCard{
+    position: relative;
+    text-align: center;
+    width: 31%;
+    
+    margin-bottom: 6px;
+    margin-right: 6px;
+
+    &__label {
+        position: relative;
+        width: 100%;
+        height: 100%;
     }
-    &__size:hover{
+
+    &__title {
+        user-select: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        padding:8px;
+        border: 1px solid var(--main-black);
+    }
+
+    &__checkbox {
+        position: absolute;
+        cursor: pointer;
+        z-index: 1;
+        opacity: 0;
+        width:100%;
+        height: 100%;
+        border: 2px solid red;
+
+    }
+
+    &__checkbox:checked~.checkedSize {
         background: var(--main-black);
-        color:var(--main-white);
+        color: var(--main-white);
     }
 
 }

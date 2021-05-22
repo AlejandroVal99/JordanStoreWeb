@@ -3060,6 +3060,11 @@ body {
   background: var(--main-red);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+
+.productDetail__reference {
+  text-transform: uppercase;
 }
 
 .productDetail__price {
@@ -3076,17 +3081,9 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.productDetail__size {
-  width: 165px;
-  height: 38px;
-  border: 1px solid var(--main-black);
-  border-radius: 4px;
-  font-size: 20px;
-  margin-top: 8px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .productDetail__button {
@@ -3099,12 +3096,54 @@ body {
   font-size: 25px;
 }
 
-.productDetail__size:focus {
-  background: var(--main-black);
-  color: var(--main-white);
+.sizeCard {
+  position: relative;
+  text-align: center;
+  width: 31%;
+  margin-bottom: 6px;
+  margin-right: 6px;
 }
 
-.productDetail__size:hover {
+.sizeCard__label {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sizeCard__title {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px;
+  border: 1px solid var(--main-black);
+}
+
+.sizeCard__checkbox {
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid red;
+}
+
+.sizeCard__checkbox:checked ~ .checkedSize {
   background: var(--main-black);
   color: var(--main-white);
 }

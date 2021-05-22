@@ -68,12 +68,12 @@ window.addEventListener('resize', handle_reSizeWindow);
 const $productsList = document.querySelector('.productList');
 
 const handleCollectionResult = (querySnapshot) => {
-    console.log(querySnapshot);
+    
     $productsList.innerHTML = '';
     querySnapshot.forEach(element => {
-
+        
         const data = element.data();
-        const productCard = document.createElement('div');
+        const productCard = document.createElement('a');
         productCard.classList.add('productCard');
 
         productCard.innerHTML = `
@@ -87,7 +87,7 @@ const handleCollectionResult = (querySnapshot) => {
             </div>
         `;
 
-
+        productCard.setAttribute('href',`./productDetail.html?id=${element.id}&name=${data.name}`);
         $productsList.appendChild(productCard);
     });
 
@@ -153,7 +153,7 @@ $filterForm.addEventListener('change', function () {
         
         productCollection = productCollection.where('colors', 'array-contains', colorFilter);
     }else{
-        productCollection = db.collection('products');
+       
     }
  
     if( $filterForm.filterBynewReleases.checked){
@@ -164,7 +164,7 @@ $filterForm.addEventListener('change', function () {
     if($filterForm.orderByPriceLow.checked){
         if($filterForm.orderByPriceHigh.checked){
             $filterForm.orderByPriceHigh.checked = false;
-            productCollection = db.collection('products');
+            
             productCollection = productCollection.orderBy('price', 'asc');
         }else{
           productCollection = productCollection.orderBy('price', 'asc')  
@@ -173,7 +173,7 @@ $filterForm.addEventListener('change', function () {
     if($filterForm.orderByPriceHigh.checked){
         if($filterForm.orderByPriceLow.checked){
             $filterForm.orderByPriceLow.checked= false;
-            productCollection = db.collection('products');
+           
             productCollection = productCollection.orderBy('price', 'desc');
         }else{
              productCollection = productCollection.orderBy('price', 'desc');
@@ -211,14 +211,14 @@ $sortFormMob.addEventListener('change', function () {
     
 }); 
 
-$btnSubmitFilter.addEventListener('click', function () {D
+$btnSubmitFilter.addEventListener('click', function () {
     let productCollection = db.collection('products');
     
     //const colors = [];
 
     const models = [];
     
-    $sortFormMob.filterByModel.forEach(function (element) {
+    $sortFormMob.filterByMode.forEach(function (element) {
         
         if (element.checked) {
 
@@ -238,8 +238,6 @@ $btnSubmitFilter.addEventListener('click', function () {D
         let colorFilter =  $sortFormMob.filterByColor.value;
         console.log(colorFilter);
         productCollection = productCollection.where('colors', 'array-contains', colorFilter);
-    }else{
-        productCollection = db.collection('products');
     }
    
  
@@ -265,4 +263,10 @@ $btnSubmitFilter.addEventListener('click', function () {D
 });
 
 let productCollection = db.collection('products');
-productCollection.get().then(handleCollectionResult);
+
+const params = new URLSearchParams(location.search);
+if(params.get('newReleases')){
+  productsCollection = productsCollection.where('newReleases', '==', params.get('newReleases'));
+}
+
+productCollection.get().then(handleCollectionResult); 

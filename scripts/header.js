@@ -2,6 +2,7 @@ const $header = document.querySelector('header');
 $header.classList.add('header');
 
 $header.innerHTML=`
+
 <a class="header__icon" href="#">
     <img src="../../resources/icons/jordan-icon.png" alt="">
 </a>
@@ -10,7 +11,10 @@ $header.innerHTML=`
     <a href="">New Releases</a>
     <a href="">Products</a>
     <a href="">My Cart</a>
-    <a  class="header__login btnOpenModal">Log in</a>
+
+    <a class="showLoggedAdmin hidden" href="./orders.html">Home</a>
+    <a class="header__login btnOpenModal hideLoggedIn">Log in</a>
+    <a class="header__login showLoggedIn btnLogOut">Log out</a>
 
 </nav>
 <img class="header__iconMobile" src="../../resources/icons/burgermenu-icon.png" alt="">

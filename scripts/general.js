@@ -13,5 +13,27 @@ const firebaseConfig = {
   const db = firebase.firestore();
   const storage = firebase.storage();
 
+  let loggedUser = null;
 
-  
+const setLoggedUser = (info, id) => {
+  loggedUser = info;
+  loggedUser.uid = id;
+  userActiveChanged(true);
+  //if(typeof checkProductFormAdmin !== 'undefined') checkProductFormAdmin();
+}
+
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    
+    db.collection('users').doc(user.uid).get().then(function (doc) {
+      if(!doc.data()) return;
+      console.log(user)
+      setLoggedUser(doc.data(), user.uid);
+    });
+    //getMyCart(user.uid);
+  } else {
+    loggedUser = null;
+    
+    userActiveChanged(false);
+  }
+});
