@@ -35,7 +35,9 @@ const handleProductResult = (doc) => {
                
 
             </form>
-            <button class="productDetail__button" href="#">ADD TO CART</button>
+            <button class="productDetail__button hideLoggedAdmin" >ADD TO CART</button>
+            <button class="productDetail__button btnEditProductDetail showLoggedAdmin hidden" >EDIT PRODUCT</button>
+            <button class="productDetail__button btnDeleteProductDetail showLoggedAdmin hidden" >DELETE PRODUCT</button>
         </div>
     `
     const $sizesContainer = document.querySelector('.productDetail__selectSize');

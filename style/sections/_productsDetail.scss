@@ -77,7 +77,11 @@
    
 
 }
-
+.btnDeleteProductDetail{
+    background-image: var(--second-white);
+        color: var(--second-red);
+        border: 2px solid var(--second-red);
+}
 .sizeCard{
     position: relative;
     text-align: center;

@@ -1,18 +1,18 @@
 const $header = document.querySelector('header');
 $header.classList.add('header');
 
-$header.innerHTML=`
+$header.innerHTML = `
 
-<a class="header__icon" href="#">
+<a class="header__icon" href="./index.html">
     <img src="../../resources/icons/jordan-icon.png" alt="">
 </a>
 <nav class="header__navBar">
-    <a href="">Home</a>
-    <a href="">New Releases</a>
-    <a href="">Products</a>
-    <a href="">My Cart</a>
+    <a href="./index.html"  >Home</a>
+    <a href="./products.html?newReleases=Yes"  class="hideLoggedAdmin">New Releases</a>
+    <a class="showLoggedAdmin hidden" href="./orders.html">Orders</a>
+    <a href="./products.html">Products</a>
+    <a href="./myCart.html" class="hideLoggedAdmin">My Cart</a>
 
-    <a class="showLoggedAdmin hidden" href="./orders.html">Home</a>
     <a class="header__login btnOpenModal hideLoggedIn">Log in</a>
     <a class="header__login showLoggedIn btnLogOut">Log out</a>
 
@@ -21,11 +21,14 @@ $header.innerHTML=`
 
 <nav class="header__navMobile">
 
-    <a href="">Home</a>
-    <a href="">New Releases</a>
-    <a href="">Products</a>
-    <a href="">My Cart</a>
-    <a href="" class="header__login">Log in</a>
+    <a href="./index.html"  >Home</a>
+    <a href="./products.html?newReleases=Yes"  class="hideLoggedAdmin">New Releases</a>
+    <a class="showLoggedAdmin hidden" href="./orders.html">Orders</a>
+    <a href="./products.html">Products</a>
+    <a href="./myCart.html" class="hideLoggedAdmin">My Cart</a>
+
+    <a class="header__login btnOpenModalMob hideLoggedIn">Log in</a>
+    <a class="header__login showLoggedIn btnLogOut">Log out</a>
 </nav>
 `;
 

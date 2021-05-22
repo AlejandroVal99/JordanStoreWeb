@@ -19,7 +19,7 @@ function userActiveChanged (loggedIn) {
 
     const $hideLoggedAdmin = document.querySelectorAll('.hideLoggedAdmin');
     $hideLoggedAdmin.forEach(function (elem) {
-      if(loggedIn) {
+      if(loggedIn && loggedUser.admin) {
         elem.classList.add('hidden');
       } else {
         elem.classList.remove('hidden');

@@ -34,10 +34,29 @@
     &__price{
         font-size: 19px;
     }
+    &__adminBar{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 12px;
+        border-top: 1px solid var(--main-black);
+        margin-top: 8px;
+    }
+    &__btnDeleteProduct{
+        color: var(--second-red);
+        padding-right: 8px;
+    }
+    &__btnEditProduct{
+        text-decoration: underline;
+        padding-left: 8px;
+    }
 
 }
 .productCard:hover{
     outline: 1px solid var(--main-black);
+   
+}
+.productCard a:hover{
+    
     cursor: pointer;
 }
 @media (max-width:825px){

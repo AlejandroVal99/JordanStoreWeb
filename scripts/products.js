@@ -54,6 +54,7 @@ function handle_reSizeWindow() {
 
 function hanlde_closeFiltersMob() {
     $asideFiltersMob.style.display = 'none';
+    $btnShowFilters.innerHTML = 'SHOW FILTERS'
 }
 
 
@@ -73,21 +74,27 @@ const handleCollectionResult = (querySnapshot) => {
     querySnapshot.forEach(element => {
         
         const data = element.data();
-        const productCard = document.createElement('a');
+        const productCard = document.createElement('div');
         productCard.classList.add('productCard');
 
         productCard.innerHTML = `
-            <div class="productCard__img">
-                <img src="${data.images[0].imgURL}" alt="" class="productCard__image">
-            </div>
-            <div class="productCard__info">
-                <p class="productCard__model">${data.model}</p>
-                <h2 class="productCard__name">${data.name}</h2>
-                <h3 class="productCard__price">$${data.price}.00</h3>
-            </div>
+        <a href="./productDetail.html?id=${element.id}&name=${data.name}">
+        <div class="productCard__img">
+          <img src="${data.images[0].imgURL}" alt="" class="productCard__image">
+        </div>
+        <div class="productCard__info">
+          <p class="productCard__model">${data.model}</p>
+          <h2 class="productCard__name">${data.name}</h2>
+          <h3 class="productCard__price">$${data.price}.00</h3>
+        </div>
+        </a>
+        <div class="productCard__adminBar hidden showLoggedAdmin">
+            <button class="productCard__btnEditProduct">EDIT</button>
+            <button class="productCard__btnDeleteProduct">REMOVE</button>
+        </div>
         `;
 
-        productCard.setAttribute('href',`./productDetail.html?id=${element.id}&name=${data.name}`);
+        
         $productsList.appendChild(productCard);
     });
 
@@ -260,13 +267,17 @@ $btnSubmitFilter.addEventListener('click', function () {
 
     productCollection.get().then(handleCollectionResult);
     $asideFiltersMob.style.display = 'none';
+    $btnShowFilters.innerHTML = 'SHOW FILTERS'
 });
 
 let productCollection = db.collection('products');
 
 const params = new URLSearchParams(location.search);
+console.log(params.get('newReleases'));
 if(params.get('newReleases')){
-  productsCollection = productsCollection.where('newReleases', '==', params.get('newReleases'));
+  productCollection = productCollection.where('newReleases', '==', 'Yes');
+  $filterForm.filterBynewReleases.checked = true;
+  $sortFormMob.filterBynewReleases.checked = true;
 }
 
 productCollection.get().then(handleCollectionResult); 

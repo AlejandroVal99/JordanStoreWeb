@@ -61,18 +61,21 @@ const $linkGoRegister = document.querySelector('.modalAuth__goRegister');
 
 const $btnCloseModal = document.querySelector('.modalAuth__btnCloseModal');
 const $btnOpenModal = document.querySelector('.btnOpenModal');
+const $btnOpenModalMob = document.querySelector('.btnOpenModalMob');
+const $btnLogOut = document.querySelector('.btnLogOut');
 
 
 
 $modalAuth.style.display = 'none';
 
 //Open Modal
+
 function handle_btnOpenModal() {
     $modalAuth.style.display = 'block';
 
     document.body.style.overflowY = 'hidden';
     document.body.style.height = '100vh';
-    console.log('Modal is Open')
+    console.log('Modal is Open');
 }
 
 //Close Modal 
@@ -101,8 +104,10 @@ function handle_linkGoRegister() {
 }
 
 //events
+
 $btnOpenModal.addEventListener('click', handle_btnOpenModal);
 $btnCloseModal.addEventListener('click', handle_btnCloseModal);
+$btnOpenModalMob.addEventListener('click', handle_btnOpenModal);
 
 $linkGoLogIn.addEventListener('click', handle_linkGoLogIn);
 $linkGoRegister.addEventListener('click', handle_linkGoRegister);
@@ -157,3 +162,7 @@ $formLogIn.addEventListener('submit', function(event){
 
     console.log(email,password);
 })
+
+$btnLogOut.addEventListener('click', function() {
+    firebase.auth().signOut();
+  });
