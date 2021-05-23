@@ -42,7 +42,6 @@ const handleProductResult = (doc) => {
 
             </form>
             <button class="productDetail__button hideLoggedAdmin btnAddToCart" >ADD TO CART</button>
-            <button class="productDetail__button btnEditProductDetail showLoggedAdmin hidden" >EDIT PRODUCT</button>
             <button class="productDetail__button btnDeleteProductDetail showLoggedAdmin hidden" >DELETE PRODUCT</button>
         </div>
     `
@@ -83,7 +82,21 @@ const handleProductResult = (doc) => {
     $btnAddToCart.addEventListener('click',function(){
         console.log('add to cart')
         if(loggedUser){
-            
+            if($sizesContainer.sizes.value){
+                let productToCart = {
+                    img: productImgArray[0].imgURL,
+                    price: data.price,
+                    name: data.name,
+                    size: $sizesContainer.sizes.value,
+                }
+
+                addToMyCart({
+                    ...productToCart,
+                    id: doc.id,
+                  });
+            }else{
+                //Feedback here
+            }
         }else{
             handle_btnOpenModal();
         }

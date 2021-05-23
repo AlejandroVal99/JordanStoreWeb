@@ -71,6 +71,14 @@ const $productsList = document.querySelector('.productList');
 const handleCollectionResult = (querySnapshot) => {
     
     $productsList.innerHTML = '';
+    
+    const addProductCard = document.createElement('a');
+    addProductCard.classList.add('addNewProductCard');
+    addProductCard.innerHTML=`
+     <img src="./resources/icons/plus-icon-big.png" alt="">
+    <p>ADD NEW PRODUCT</p>
+    `
+    $productsList.appendChild(addProductCard);
     querySnapshot.forEach(element => {
         
         const data = element.data();
@@ -89,7 +97,6 @@ const handleCollectionResult = (querySnapshot) => {
         </div>
         </a>
         <div class="productCard__adminBar hidden showLoggedAdmin">
-            <button class="productCard__btnEditProduct">EDIT</button>
             <button class="productCard__btnDeleteProduct">REMOVE</button>
         </div>
         `;
@@ -97,7 +104,7 @@ const handleCollectionResult = (querySnapshot) => {
         
         $productsList.appendChild(productCard);
 
-        const bntEditProduct =productCard.querySelector('productCard__btnEditProduct');
+    
         const btnRemoveProduct = productCard.querySelector('productCard__btnDeleteProduct');
     });
 
@@ -276,7 +283,7 @@ $btnSubmitFilter.addEventListener('click', function () {
 let productCollection = db.collection('products');
 
 const params = new URLSearchParams(location.search);
-console.log(params.get('newReleases'));
+
 if(params.get('newReleases')){
   productCollection = productCollection.where('newReleases', '==', 'Yes');
   $filterForm.filterBynewReleases.checked = true;

@@ -16,8 +16,7 @@ $footer.innerHTML = `
     <a href="">Home</a>
     <a href="">New Releases</a>
     <a href="">Products</a>
-    <a href="">My Cart</a>
-    <a href="" class="footer__login">Log in</a>
+   
     </nav>
 
 </div>

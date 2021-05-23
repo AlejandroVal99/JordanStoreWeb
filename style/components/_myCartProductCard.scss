@@ -14,7 +14,7 @@
     }
     &__containerInfo{
         width: 100%;
-        border-top: 2px solid var(--main-black);
+        border-top: 1px solid var(--main-black);
         border-bottom: 1px solid var(--main-black);
         display: flex;
         flex-direction: column;
@@ -27,6 +27,7 @@
         font-weight:600;
         font-size: 20px;
         margin: 10px 0;
+        text-transform: uppercase;
     }
     &__price{
         font-weight:600;
@@ -47,6 +48,10 @@
         color: var(--second-red);
         //border: 2px solid indigo;
     }
+    &__btnRemove:hover{
+        text-decoration: underline;
+        //border: 2px solid indigo;
+    }
 }
 @media (min-width: 700px){
     .myCartProductCard{
@@ -60,7 +65,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border-right: 2px solid var(--main-black);
+            border-right: 1px solid var(--main-black);
             img{
                 width:90%;
                 margin: 0 auto;
@@ -75,7 +80,7 @@
         }
         &__editBar{
             //border: 2px solid yellow;
-            border-top: 2px solid var(--main-black);
+            border-top: 1px solid var(--main-black);
         }
         &__name{
             font-size: 26px;
