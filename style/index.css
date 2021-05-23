@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap");
 :root {
   --main-black: #000000;
   --main-white: #FFF;
@@ -2558,9 +2559,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding: 4px;
 }
 
@@ -2732,6 +2733,238 @@ body {
   }
   .myCart__btnCheckout {
     margin-top: 0px;
+  }
+}
+
+:root {
+  --main-black: #000000;
+  --main-white: #FFF;
+  --second-white: #F8F8F8;
+  --main-red: linear-gradient(90deg, rgba(195,1,1,1) 0%, rgba(215,0,0,1) 100%);
+  --second-red:rgba(195,1,1,1);
+  --grey-dark:#4A4A4A;
+  --grey-weak: #767676;
+  --gradient-white: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 73%);
+}
+
+:root {
+  --main-font: 'Aldrich', sans-serif;
+}
+
+* {
+  font-family: var(--main-font);
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border-width: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+figure {
+  margin: 0;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+cite {
+  font-style: normal;
+}
+
+fieldset {
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.modalAuth {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(248, 248, 248, 0.4);
+  z-index: 100;
+  border: 1px solid red;
+}
+
+.modalAuth__logo {
+  width: 25%;
+  margin-bottom: 24px;
+}
+
+.modalAuth__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 14px;
+  margin-top: 16px;
+  font-weight: lighter;
+}
+
+.modalAuth__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: var(--second-white);
+  background: var(--main-black);
+  width: 30%;
+  min-width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 25px;
+  padding-top: 15px;
+}
+
+.modalAuth__registerForm {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+.modalAuth__loginForm {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modalAuth__goTo {
+  font-size: 12px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.modalAuth__goTo:hover {
+  text-decoration: underline;
+}
+
+.modalAuth__title {
+  text-align: center;
+  font-size: 24px;
+}
+
+.modalAuth__input {
+  color: var(--main-white);
+  padding: 12px;
+  border: 1px solid var(--main-white);
+  background: var(--main-black);
+  margin-top: 8px;
+}
+
+.modalAuth__btn {
+  background: var(--main-white);
+  color: var(--main-black);
+  font-size: 24px;
+  padding: 8px;
+  margin-top: 24px;
+}
+
+.modalAuth__btnCloseModal {
+  position: absolute;
+  width: 5%;
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 550px) {
+  .modalAuth__logo {
+    width: 35%;
+    margin-bottom: 24px;
+  }
+  .modalAuth__container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100vh;
   }
 }
 

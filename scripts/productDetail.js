@@ -2,8 +2,8 @@
 
 const params = new URLSearchParams(location.search);
 const productId = params.get('id');
-/* const $productSection = document.querySelector('.productDetail');
-const $productPrice = document.querySelector('.productDetail__price');
+ const $productSection = document.querySelector('.productDetail');
+/*const $productPrice = document.querySelector('.productDetail__price');
 const $productBrand = document.querySelector('.productDetail__brand');
 const $productReference = document.querySelector('.productDetail__reference');
 const $productDescription= document.querySelector('.productDetail__description'); */
@@ -13,6 +13,7 @@ const $productDescription= document.querySelector('.productDetail__description')
 if (!productId) {
     location.href = './products.html';
 }
+
 const handleProductResult = (doc) => {
     const data = doc.data();
     if (!data) {

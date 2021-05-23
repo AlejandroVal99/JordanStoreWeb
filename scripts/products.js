@@ -96,6 +96,9 @@ const handleCollectionResult = (querySnapshot) => {
 
         
         $productsList.appendChild(productCard);
+
+        const bntEditProduct =productCard.querySelector('productCard__btnEditProduct');
+        const btnRemoveProduct = productCard.querySelector('productCard__btnDeleteProduct');
     });
 
 }

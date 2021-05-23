@@ -37,7 +37,7 @@
     &__editBar{
         //border: 2px solid yellow;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         padding: 4px;
     }
     &__btnEdit{

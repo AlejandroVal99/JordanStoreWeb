@@ -11,7 +11,7 @@ $header.innerHTML = `
     <a href="./products.html?newReleases=Yes"  class="hideLoggedAdmin">New Releases</a>
     <a class="showLoggedAdmin hidden" href="./orders.html">Orders</a>
     <a href="./products.html">Products</a>
-    <a class="hideLoggedAdmin btnGoCard">My Cart</a>
+    <a class="hideLoggedAdmin btnGoCard">My Cart <span></span> </a>
 
     <a class="header__login btnOpenModal hideLoggedIn">Log in</a>
     <a class="header__login showLoggedIn btnLogOut">Log out</a>
@@ -25,7 +25,7 @@ $header.innerHTML = `
     <a href="./products.html?newReleases=Yes"  class="hideLoggedAdmin">New Releases</a>
     <a class="showLoggedAdmin hidden" href="./orders.html">Orders</a>
     <a href="./products.html">Products</a>
-    <a class="hideLoggedAdmin btnGoCardMob">My Cart</a>
+    <a class="hideLoggedAdmin btnGoCardMob">My Cart <span></span></a>
 
     <a class="header__login btnOpenModalMob hideLoggedIn">Log in</a>
     <a class="header__login showLoggedIn btnLogOutMob">Log out</a>
