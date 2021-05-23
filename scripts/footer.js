@@ -13,9 +13,9 @@ $footer.innerHTML = `
 
     <nav class="footer__navBar">
 
-    <a href="">Home</a>
-    <a href="">New Releases</a>
-    <a href="">Products</a>
+    <a href="./index.html">Home</a>
+    <a href="./products.html?newReleases=Yes">New Releases</a>
+    <a href="./products.html">Products</a>
    
     </nav>
 
@@ -24,16 +24,16 @@ $footer.innerHTML = `
 <div class="footer__socialMedia">
 
     <a target="_blank" href="">
-        <img class="footer__socialIcon" src="../../resources/icons/facebook-icon.png" alt="">
+        <img class="footer__socialIcon" src="./resources/icons/facebook-icon.png" alt="">
     </a>
     <a target="_blank" href="">
-        <img class="footer__socialIcon" src="../../resources/icons/instagram-icon.png" alt="">
+        <img class="footer__socialIcon" src="./resources/icons/instagram-icon.png" alt="">
     </a>
     <a target="_blank" href="">
-        <img class="footer__socialIcon" src="../../resources/icons/spotify-icon.png" alt="">
+        <img class="footer__socialIcon" src="./resources/icons/spotify-icon.png" alt="">
     </a>
     <a target="_blank" href="">
-        <img class="footer__socialIcon" src="../../resources/icons/youtube-icon.png" alt="">
+        <img class="footer__socialIcon" src="./resources/icons/youtube-icon.png" alt="">
     </a>
 
 
