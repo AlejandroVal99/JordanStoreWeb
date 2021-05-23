@@ -108,7 +108,15 @@ const handleCollectionResult = (querySnapshot) => {
         $productsList.appendChild(productCard);
 
     
-        const btnRemoveProduct = productCard.querySelector('productCard__btnDeleteProduct');
+        const btnRemoveProduct = productCard.querySelector('.productCard__btnDeleteProduct');
+
+        btnRemoveProduct.addEventListener('click',function(){
+            let productCollection = db.collection('products');
+            productCollection.doc(element.id).delete().then(()=>{
+                location.reload();
+            });
+            
+        })
     });
 
 }
@@ -292,5 +300,28 @@ if(params.get('newReleases')){
   $filterForm.filterBynewReleases.checked = true;
   $sortFormMob.filterBynewReleases.checked = true;
 }
+
+if(params.get('model')){
+
+    switch(params.get('model')){
+        case 'airjordani':
+        break;
+
+        case 'airjordaniii':
+        break;
+
+        case 'airjordaniv':
+        break;
+
+        case 'airjordanii':
+        break;
+
+    }
+
+
+    productCollection = productCollection.where('newReleases', '==', 'Yes');
+    $filterForm.filterBynewReleases.checked = true;
+    $sortFormMob.filterBynewReleases.checked = true;
+  }
 
 productCollection.get().then(handleCollectionResult); 

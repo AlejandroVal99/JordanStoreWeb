@@ -9,8 +9,9 @@ let totalCart = 0;
 renderCart = () => {
 
     $cardProductsList.innerHTML = '';
+    console.log(cart.length);
     if (cart.length == 0) {
-        $cardProductsList.innerText = 'No products yet';
+        $cardProductsList.innerText = "You don't have products yet";
     }
     totalCart = 0;
     cart.forEach((data) => {

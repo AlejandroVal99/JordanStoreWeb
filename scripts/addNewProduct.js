@@ -1,4 +1,5 @@
 const $productForm = document.querySelector('.productForm__form');
+const $feedbackMessage = document.querySelector('.productForm__feedbackMessage')
 const $imagesContainer = document.querySelector('.productForm__imagesContainer');
 
 let imagesFiles = [];
@@ -39,6 +40,30 @@ function cleanForm(){
 $productForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
+    let name= $productForm.name.value;
+    let   price= parseInt($productForm.price.value);
+    let  description= $productForm.description.value;
+    let  model= $productForm.model.value;
+    let  year= $productForm.year.value;
+    let  newReleases= $productForm.newReleases.value;
+    
+    if(imagesFiles.length!=4){
+        $feedbackMessage.innerHTML='You must have at least 4 images';
+        setTimeout(function(){
+            $feedbackMessage.innerText = "";
+        },2000)
+
+        return;  
+    } 
+    if(name == '' || price == '' || description == '' || model == '' ||year == '' || newReleases == '' ){
+        $feedbackMessage.innerHTML='Fill out all the fields';
+        setTimeout(function(){
+            $feedbackMessage.innerText = "";
+        },2000)
+        return;  
+    } 
+
+
     const product = {
         name: $productForm.name.value,
         price: parseInt($productForm.price.value),
@@ -69,7 +94,8 @@ $productForm.addEventListener('submit', function (event) {
    
     db.collection('products').add(product)
         .then((docRef) => {
-
+            $feedbackMessage.style.color='var(--main-black)';
+            $feedbackMessage.innerText = "Adding the new product";
             const imgUploadPromises = [];
             const imgDownloadUrlPromises = [];
 
@@ -112,15 +138,21 @@ $productForm.addEventListener('submit', function (event) {
                     db.collection('products').doc(docRef.id).update({
                         images: images,
                     }).then(function () {
-                        //End process feedback here
+                        $feedbackMessage.innerText = "Product added correctly";
                         console.log("creates products ready");
                         cleanForm();
+
+                        setTimeout(function(){
+                            $feedbackMessage.innerText = "";
+                            $feedbackMessage.style.color='var(--second-red)';
+                        },2000)
                     });
                 });
             });
         })
         .catch((error) => {
             console.log(error);
+    
         })
 
     ;

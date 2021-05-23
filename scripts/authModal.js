@@ -27,6 +27,8 @@ authModal.innerHTML = `<div class="modalAuth__container">
     </label>
     <span class="modalAuth__goLogin modalAuth__goTo">Don’t have an account? Sign up</span>
     <button type= "submit" class="modalAuth__btn btnRegister">REGISTER</button>
+    
+    <p class="regFeedbackMsg"></p>
 </form>
 
 <form action="" class="modalAuth__loginForm">
@@ -42,6 +44,7 @@ authModal.innerHTML = `<div class="modalAuth__container">
     </label>
     <span class="modalAuth__goRegister modalAuth__goTo">Already have account? Login</span>
     <button type= "submit" class="modalAuth__btn btnLogin">LOG IN</button>
+    <p class="logInFeedbackMsg"></p>
 </form>
 </div>`;
 
@@ -55,6 +58,9 @@ const $modalAuth = document.querySelector('.modalAuth');
 
 const $formLogIn = document.querySelector('.modalAuth__loginForm');
 const $formRegister = document.querySelector('.modalAuth__registerForm');
+
+const $regFeedbackMsg = document.querySelector('.regFeedbackMsg');
+const $logInFeedbackMsg = document.querySelector('.logInFeedbackMsg');
 
 const $linkGoLogIn = document.querySelector('.modalAuth__goLogin');
 const $linkGoRegister = document.querySelector('.modalAuth__goRegister');
@@ -135,14 +141,20 @@ $formRegister.addEventListener('submit', function(event){
               email: email,
             };
             db.collection('users').doc(user.uid).set(userDoc);
-            
+            setLoggedUser(userDoc,user.uid);
             handle_btnCloseModal();
           })
           .catch((error) => {
-            console.log(error.message) ;
+            $regFeedbackMsg.innerHTML=error.message;
+            setTimeout(()=>{
+                $regFeedbackMsg.innerHTML='';
+            },2000)
           });
     }else{
-
+        $regFeedbackMsg.innerHTML="Passwords don't match";
+            setTimeout(()=>{
+                $regFeedbackMsg.innerHTML='';
+            },2000);
     }
 
 })
@@ -158,6 +170,11 @@ $formLogIn.addEventListener('submit', function(event){
       })
       .catch((error) => {
         console.log(error.message);
+        $logInFeedbackMsg.innerHTML=error.message;
+
+        setTimeout(()=>{
+            $logInFeedbackMsg.innerHTML='';
+        },2000)
       });
 
     console.log(email,password);

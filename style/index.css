@@ -219,6 +219,16 @@ body {
   cursor: pointer;
 }
 
+.logInFeedbackMsg {
+  margin-top: 8px;
+  color: var(--second-red);
+}
+
+.regFeedbackMsg {
+  margin-top: 8px;
+  color: var(--second-red);
+}
+
 @media (max-width: 550px) {
   .modalAuth__logo {
     width: 35%;
@@ -433,6 +443,7 @@ body {
 
 .productForm__textField {
   border: 1.5px solid var(--main-black);
+  background: var(--second-white);
   height: 30px;
   width: 100%;
   padding: 16px;
@@ -443,11 +454,13 @@ body {
   width: 100%;
   height: 70px;
   padding: 8px;
+  background: var(--second-white);
 }
 
 .productForm__selectModel {
   height: 30px;
   width: 100%;
+  background: var(--second-white);
   border: 1px solid var(--main-black);
 }
 
@@ -461,6 +474,13 @@ body {
   width: 25%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.productForm__feedbackMessage {
+  text-align: center;
+  margin-top: 8px;
+  color: var(--second-red);
+  font-size: 20px;
 }
 
 .checkboxColorContainer {
@@ -2303,6 +2323,16 @@ body {
   cursor: pointer;
 }
 
+.logInFeedbackMsg {
+  margin-top: 8px;
+  color: var(--second-red);
+}
+
+.regFeedbackMsg {
+  margin-top: 8px;
+  color: var(--second-red);
+}
+
 @media (max-width: 550px) {
   .modalAuth__logo {
     width: 35%;
@@ -3007,6 +3037,16 @@ body {
   right: 8px;
   top: 8px;
   cursor: pointer;
+}
+
+.logInFeedbackMsg {
+  margin-top: 8px;
+  color: var(--second-red);
+}
+
+.regFeedbackMsg {
+  margin-top: 8px;
+  color: var(--second-red);
 }
 
 @media (max-width: 550px) {
