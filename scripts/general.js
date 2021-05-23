@@ -40,9 +40,9 @@ firebase.auth().onAuthStateChanged((user) => {
 
 let cart = []; 
 const cartBtnNumber = document.querySelector('.btnGoCard span');
-const cartBtnNumberMob = document.querySelector('.btnGoCardMob span');
+const cartBtnNumberMob = document.querySelector('.numberCartMob');
 
-
+console.log(cartBtnNumberMob);
 
 const cartCollection = db.collection('cart');
 const orderCollection= db.collection('orders');
@@ -52,7 +52,7 @@ const addToMyCart = (product) => {
   cartCollection.doc(loggedUser.uid).set({
     cart,
   });
-  console.log('Agregado');
+  console.log(cart.length);
   cartBtnNumber.innerText = cart.length;
   cartBtnNumberMob.innerText = cart.length;
 };
@@ -75,7 +75,7 @@ const getMyCart = (uid) => {
     const data = snapShot.data();
     if(!data) return;
     if(cartBtnNumber) cartBtnNumber.innerText = data.cart.length;
-    if(cartBtnNumberMob) cartBtnNumber.innerText = data.cart.length;
+    if(cartBtnNumberMob) cartBtnNumberMob.innerText = data.cart.length;
     cart = data.cart;
     console.log(cart);
     if(renderCart) renderCart();
