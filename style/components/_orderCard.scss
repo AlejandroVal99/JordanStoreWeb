@@ -8,7 +8,9 @@
         display: flex;
         justify-content: space-between;
         margin-top: 4%;
+        font-size: 10px;
     }
+
     &__id{
         font-weight: bold;
         font-size: 20px;
@@ -17,7 +19,7 @@
     &__price{
         align-self: flex-end;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 18px;
     }
     &__nProducts{
         font-size: 14px;

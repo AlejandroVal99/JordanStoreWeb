@@ -48,22 +48,34 @@ const handleProductResult = (doc) => {
     const $sizesContainer = document.querySelector('.productDetail__selectSize');
     $sizesContainer.innerHTML = '';
 
-    data.sizes.forEach(size=>{
-        
+    data.sizes.forEach((size,index)=>{
         const sizeCard = document.createElement('div');
         sizeCard.classList.add('sizeCard');
-        sizeCard.innerHTML=`
+
+        if(index==0){
+            sizeCard.innerHTML=`
           <label class="sizeCard__label">
-            <input class="sizeCard__checkbox" value="${size}" type="radio" name="sizes" id="">
+            <input class="sizeCard__checkbox" checked value="${size}" type="radio" name="sizes" id="">
             <div class="sizeCard__title checkedSize">
               <p>${size}</p>
             </div>
           </label>
         `;
+        }else{
+            sizeCard.innerHTML=`
+            <label class="sizeCard__label">
+              <input class="sizeCard__checkbox" checked value="${size}" type="radio" name="sizes" id="">
+              <div class="sizeCard__title checkedSize">
+                <p>${size}</p>
+              </div>
+            </label>`
+        }
+        
         $sizesContainer.appendChild(sizeCard);
     })
 
     const $btnAddToCart = document.querySelector('.btnAddToCart');
+    const $btnDeleteDetail = document.querySelector('.btnDeleteProductDetail');
     
 
     const $mainImage = document.querySelector(".productDetail__main");
@@ -100,6 +112,15 @@ const handleProductResult = (doc) => {
         }else{
             handle_btnOpenModal();
         }
+    });
+
+    $btnDeleteDetail.addEventListener('click',function(){
+        let productCollection = db.collection('products');
+        productCollection.doc(doc.id).delete().then(
+            ()=>{
+                window.location='./products.html';
+            }
+        )
     });
 
 

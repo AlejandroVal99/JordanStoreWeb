@@ -36,7 +36,7 @@
     }
     &__adminBar{
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         padding-top: 12px;
         border-top: 1px solid var(--main-black);
         margin-top: 8px;
@@ -61,7 +61,7 @@
 }
 .addNewProductCard{
     width: 32%;
-    border: 1px solid black;
+    border: 1px solid var(--second-red);
     margin: 8px 0.5%;
     padding: 16px 0;
     display: flex;
@@ -75,7 +75,13 @@
     p{
         color:var(--second-red);
         font-size: 28px;
+        text-align: center;
     }
+}
+
+.addNewProductCard:hover{
+    outline: 1px solid var(--second-red);
+   
 }
 @media (max-width:825px){
     .productCard{
@@ -89,6 +95,13 @@
         }
         &__price{
             font-size: 14px;
+        }
+    }
+
+    .addNewProductCard{
+        width: 49%;
+        p{
+            font-size: 22px;
         }
     }
 }

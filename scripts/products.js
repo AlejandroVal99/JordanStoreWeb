@@ -74,6 +74,9 @@ const handleCollectionResult = (querySnapshot) => {
     
     const addProductCard = document.createElement('a');
     addProductCard.classList.add('addNewProductCard');
+    addProductCard.classList.add('hidden');
+    addProductCard.classList.add('showLoggedAdmin');
+    addProductCard.setAttribute('href','./addNewProduct.html');
     addProductCard.innerHTML=`
      <img src="./resources/icons/plus-icon-big.png" alt="">
     <p>ADD NEW PRODUCT</p>
