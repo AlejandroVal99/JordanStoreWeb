@@ -4,6 +4,7 @@ $footer.innerHTML = `
 <div class="footer__content">
     <div class="footer__brandInfo">
         <img class="footer__icon" src="./resources/icons/jordan-icon.png">
+        
         <p class="footer__descriptionBrand">
             Air Jordan (sometimes abbreviated AJ) is an American brand of basketball shoes, athletic, casual,
             and style clothing produced by Nike. Founded in Chicago, Air Jordan was created for Hall of Fame
