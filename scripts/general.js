@@ -63,7 +63,7 @@ const changedCard = () =>{
   });
   console.log('Agregado');
   if(cartBtnNumber) cartBtnNumber.innerText = cart.length;
-    if(cartBtnNumberMob) cartBtnNumber.innerText = cart.length;
+    if(cartBtnNumberMob) cartBtnNumberMob.innerText = cart.length;
   if(renderCart) renderCart();
   //if(renderChekout) renderChekout();
 }

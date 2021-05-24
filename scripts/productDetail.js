@@ -43,6 +43,7 @@ const handleProductResult = (doc) => {
             </form>
             <button class="productDetail__button hideLoggedAdmin btnAddToCart" >ADD TO CART</button>
             <button class="productDetail__button btnDeleteProductDetail showLoggedAdmin hidden" >DELETE PRODUCT</button>
+            <p class="productDetail__feedbackMsg" ></p>
         </div>
     `
     const $sizesContainer = document.querySelector('.productDetail__selectSize');
@@ -77,6 +78,7 @@ const handleProductResult = (doc) => {
     const $btnAddToCart = document.querySelector('.btnAddToCart');
     const $btnDeleteDetail = document.querySelector('.btnDeleteProductDetail');
     
+    const $feedbackMessage = document.querySelector('.productDetail__feedbackMsg');
 
     const $mainImage = document.querySelector(".productDetail__main");
     const $otherImages = document.querySelectorAll(".productDetail__slide");
@@ -106,8 +108,13 @@ const handleProductResult = (doc) => {
                     ...productToCart,
                     id: doc.id,
                   });
+                  $feedbackMessage.innerText='Product added to cart';
+                setTimeout(()=>{
+                    $feedbackMessage.innerText='';
+                },2000);
             }else{
                 //Feedback here
+                
             }
         }else{
             handle_btnOpenModal();

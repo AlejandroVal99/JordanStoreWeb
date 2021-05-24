@@ -81,6 +81,7 @@ const handleCollectionResult = (querySnapshot) => {
      <img src="./resources/icons/plus-icon-big.png" alt="">
     <p>ADD NEW PRODUCT</p>
     `
+    console.log(addProductCard);
     $productsList.appendChild(addProductCard);
     querySnapshot.forEach(element => {
         
@@ -155,8 +156,9 @@ $filterForm.addEventListener('change', function () {
 
     let productCollection = db.collection('products');
     const models = [];
-    //const colors = [];
-
+   
+   
+   
 
     $filterForm.filterByModel.forEach(function (element) {
         
@@ -242,6 +244,7 @@ $sortFormMob.addEventListener('change', function () {
 $btnSubmitFilter.addEventListener('click', function () {
     let productCollection = db.collection('products');
     
+    
     //const colors = [];
 
     const models = [];
@@ -290,10 +293,10 @@ $btnSubmitFilter.addEventListener('click', function () {
     $asideFiltersMob.style.display = 'none';
     $btnShowFilters.innerHTML = 'SHOW FILTERS'
 });
-
+const params = new URLSearchParams(location.search);
 let productCollection = db.collection('products');
 
-const params = new URLSearchParams(location.search);
+
 
 if(params.get('newReleases')){
   productCollection = productCollection.where('newReleases', '==', 'Yes');
@@ -302,26 +305,35 @@ if(params.get('newReleases')){
 }
 
 if(params.get('model')){
-
+    let modelArray = [];
     switch(params.get('model')){
         case 'airjordani':
+            modelArray.push("Air Jordan I");
+            let input =  $filterForm.filterByModel[0].checked = true;
+            
+            productCollection = productCollection.where('model', 'in', modelArray);
         break;
 
         case 'airjordaniii':
+            modelArray.push("Air Jordan III");
+            $filterForm.filterByModel[1].checked = true;
+            productCollection = productCollection.where('model', 'in', modelArray);
         break;
 
         case 'airjordaniv':
+            modelArray.push("Air Jordan IV");
+            $filterForm.filterByModel[2].checked = true;
+            productCollection = productCollection.where('model', 'in', modelArray);
         break;
 
-        case 'airjordanii':
+        case 'airjordanv':
+            modelArray.push("Air Jordan V");
+            $filterForm.filterByModel[3].checked = true;
+            productCollection = productCollection.where('model', 'in', modelArray);
         break;
 
     }
 
-
-    productCollection = productCollection.where('newReleases', '==', 'Yes');
-    $filterForm.filterBynewReleases.checked = true;
-    $sortFormMob.filterBynewReleases.checked = true;
   }
 
 productCollection.get().then(handleCollectionResult); 

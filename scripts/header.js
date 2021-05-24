@@ -4,7 +4,7 @@ $header.classList.add('header');
 $header.innerHTML = `
 
 <a class="header__icon" href="./index.html">
-    <img src="../../resources/icons/jordan-icon.png" alt="">
+    <img src="./resources/icons/jordan-icon.png" alt="">
 </a>
 <nav class="header__navBar">
     <a href="./index.html"  >Home</a>
@@ -17,7 +17,7 @@ $header.innerHTML = `
     <a class="header__login showLoggedIn btnLogOut">Log out</a>
 
 </nav>
-<img class="header__iconMobile" src="../../resources/icons/burgermenu-icon.png" alt="">
+<img class="header__iconMobile" src="./resources/icons/burgermenu-icon.png" alt="">
 
 <nav class="header__navMobile">
 

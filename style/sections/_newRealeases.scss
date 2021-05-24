@@ -11,6 +11,11 @@
         border: 1px solid var(--main-black);
         display: flex;
         flex-direction: column;
+        cursor: pointer;
+    }
+    &__container:hover {
+        outline: 1px solid var(--main-black);
+       
     }
 
     &__title {

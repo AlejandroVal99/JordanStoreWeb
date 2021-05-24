@@ -4,6 +4,7 @@ const $checkOutTotal = document.querySelector('.checkout__total span');
 const $checkOutShippingCost = document.querySelector('.checkout__shippingCost span');
 const $checkoutForm = document.querySelector('.checkout__form');
 const $btnCheckoutConfirm=document.querySelector('.checkout__btnConfirm');
+const $checkoutFeedbackMsg = document.querySelector('.checkout__feedbackMsg');
 
 let subtotalCheckout= 0;
 let totalCheckout = 0;
@@ -61,6 +62,23 @@ $checkoutForm.addEventListener('change',function(){
 });
 
 $btnCheckoutConfirm.addEventListener('click',function(){
+
+    let address= $checkoutForm.address.value;
+    let zipcode=  $checkoutForm.zipCode.value;
+    let city= $checkoutForm.city.value;
+    let phone=$checkoutForm.phone.value;
+
+    if(address==''  || zipcode=='' || city=='' || phone==''){
+        $checkoutFeedbackMsg.style.color='var(--second-red)';
+        $checkoutFeedbackMsg.innerText='Fill out all the fields';
+        setTimeout(function(){
+            $checkoutFeedbackMsg.style.color='var(--main-black)';
+            $checkoutFeedbackMsg.innerText = "";
+        },2000)
+        return;  
+    }
+  
+
     const order = {
        
         address: $checkoutForm.address.value,

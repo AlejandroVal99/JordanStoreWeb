@@ -24,7 +24,7 @@
 }
 
 .modelCard {
-    border: 2px solid black;
+    border: 1px solid black;
     padding: 8px;
     width: 22%;
     min-width: 126px;
@@ -42,6 +42,10 @@
             text-align: center;
         }
     }
+}
+
+.modelCard:hover{
+    outline: 1px solid var(--main-black);
 }
 @media(max-width:750px) {
     .categories {
