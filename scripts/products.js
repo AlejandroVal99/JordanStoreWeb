@@ -224,10 +224,10 @@ $sortFormMob.filterByColor.forEach(function (element) {
         
             
     element.addEventListener('mousedown', function(ev){
-        console.log('click', element.value, $sortFormMob.filterByColor.value, ev.target);
+       
         
         if(element.value == $sortFormMob.filterByColor.value){
-            console.log('false')
+            
             
             setTimeout(() => element.checked = false, 100);
             $sortFormMob.filterByColor.value='';
@@ -254,20 +254,20 @@ $btnSubmitFilter.addEventListener('click', function () {
         if (element.checked) {
 
             models.push(element.getAttribute('data-model'));
-            console.log(element);
+            
         }
     })
     if (models.length > 0) {
        
         productCollection = productCollection.where('model', 'in', models);
-        console.log(models);
+        
     }
     
     
     
     if($sortFormMob.filterByColor.value != ''){
         let colorFilter =  $sortFormMob.filterByColor.value;
-        console.log(colorFilter);
+        
         productCollection = productCollection.where('colors', 'array-contains', colorFilter);
     }
    

@@ -11,8 +11,7 @@ const handleOrdersResult = (querySnapshot) => {
         const data = element.data();
         const orderCard = document.createElement('div');
         orderCard.classList.add('orderCard');
-        console.log(element.id);
-        console.log(data);
+        
         orderCard.innerHTML = `
             <div class="orderCard__infoOrder">
                 <h2 class="orderCard__id">ID: ${element.id}</h2>

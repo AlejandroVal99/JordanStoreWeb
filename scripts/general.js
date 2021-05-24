@@ -27,7 +27,7 @@ firebase.auth().onAuthStateChanged((user) => {
     
     db.collection('users').doc(user.uid).get().then(function (doc) {
       if(!doc.data()) return;
-      console.log(user)
+    
       setLoggedUser(doc.data(), user.uid);
     });
     getMyCart(user.uid);
@@ -52,7 +52,7 @@ const addToMyCart = (product) => {
   cartCollection.doc(loggedUser.uid).set({
     cart,
   });
-  console.log(cart.length);
+  
   cartBtnNumber.innerText = cart.length;
   cartBtnNumberMob.innerText = cart.length;
 };
@@ -65,7 +65,7 @@ const changedCard = () =>{
   if(cartBtnNumber) cartBtnNumber.innerText = cart.length;
     if(cartBtnNumberMob) cartBtnNumberMob.innerText = cart.length;
   if(renderCart) renderCart();
-  //if(renderChekout) renderChekout();
+  
 }
 
 let renderCart = null;
@@ -79,6 +79,6 @@ const getMyCart = (uid) => {
     cart = data.cart;
     console.log(cart);
     if(renderCart) renderCart();
-    //if(renderChekout) renderChekout();
+    
   });
 };

@@ -11,7 +11,7 @@ $goToModel.forEach((elem)=>{
 
     elem.addEventListener('click',function(){
         let dataModel = elem.getAttribute('data-gomodel');
-        console.log(dataModel);
+        
         window.location = `./products.html?model=${dataModel}`;
     })
 })

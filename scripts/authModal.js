@@ -81,7 +81,7 @@ function handle_btnOpenModal() {
 
     document.body.style.overflowY = 'hidden';
     document.body.style.height = '100vh';
-    console.log('Modal is Open');
+    
 }
 
 //Close Modal 
@@ -127,14 +127,14 @@ $formRegister.addEventListener('submit', function(event){
     const email = $formRegister.email.value;
     const password = $formRegister.password.value;
     const confirmPassword = $formRegister.confirmPassword.value;
-    console.log(fullName,email,password,confirmPassword);
+   
     if(password == confirmPassword){
-        console.log(email, password);
+       
         firebase.auth().createUserWithEmailAndPassword(email, password)
           .then((userCredential) => {
             // Signed in 
             let user = userCredential.user;
-            console.log(user);
+           
     
             const userDoc = {
               name:fullName,
@@ -169,7 +169,7 @@ $formLogIn.addEventListener('submit', function(event){
         handle_btnCloseModal();
       })
       .catch((error) => {
-        console.log(error.message);
+        
         $logInFeedbackMsg.innerHTML=error.message;
 
         setTimeout(()=>{
@@ -177,7 +177,7 @@ $formLogIn.addEventListener('submit', function(event){
         },2000)
       });
 
-    console.log(email,password);
+    
 })
 
 function handle_btnLogOut(){
