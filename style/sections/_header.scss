@@ -51,6 +51,9 @@
     }
 }
 
+.btnLogOutMob,.btnLogOut{
+    color:var(--second-red);
+}
 @media(max-width:550px) {
 
     .header {

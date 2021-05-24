@@ -296,6 +296,10 @@ body {
   display: none;
 }
 
+.btnLogOutMob, .btnLogOut {
+  color: var(--second-red);
+}
+
 @media (max-width: 550px) {
   .header {
     overflow: visible;
@@ -682,6 +686,10 @@ body {
 
 .header__iconMobile {
   display: none;
+}
+
+.btnLogOutMob, .btnLogOut {
+  color: var(--second-red);
 }
 
 @media (max-width: 550px) {
@@ -1445,6 +1453,10 @@ body {
 
 .header__iconMobile {
   display: none;
+}
+
+.btnLogOutMob, .btnLogOut {
+  color: var(--second-red);
 }
 
 @media (max-width: 550px) {
@@ -2408,6 +2420,10 @@ body {
 
 .header__iconMobile {
   display: none;
+}
+
+.btnLogOutMob, .btnLogOut {
+  color: var(--second-red);
 }
 
 @media (max-width: 550px) {
@@ -3529,6 +3545,10 @@ body {
   display: none;
 }
 
+.btnLogOutMob, .btnLogOut {
+  color: var(--second-red);
+}
+
 @media (max-width: 550px) {
   .header {
     overflow: visible;
@@ -4054,6 +4074,10 @@ body {
 
 .header__iconMobile {
   display: none;
+}
+
+.btnLogOutMob, .btnLogOut {
+  color: var(--second-red);
 }
 
 @media (max-width: 550px) {
