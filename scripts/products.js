@@ -81,7 +81,7 @@ const handleCollectionResult = (querySnapshot) => {
      <img src="./resources/icons/plus-icon-big.png" alt="">
     <p>ADD NEW PRODUCT</p>
     `
-    console.log(addProductCard);
+    
     $productsList.appendChild(addProductCard);
     querySnapshot.forEach(element => {
         
@@ -142,7 +142,7 @@ $filterForm.filterByColor.forEach(function (element) {
         console.log('click', element.value, $filterForm.filterByColor.value, ev.target);
         
         if(element.value == $filterForm.filterByColor.value){
-            console.log('false')
+           
             
             setTimeout(() => element.checked = false, 100);
             $filterForm.filterByColor.value='';
@@ -173,7 +173,7 @@ $filterForm.addEventListener('change', function () {
     
     if (models.length > 0) {
 
-        console.log(models);
+        
         productCollection = productCollection.where('model' , 'in' , models);
     }
     

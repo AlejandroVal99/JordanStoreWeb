@@ -20,7 +20,7 @@ const handleProductResult = (doc) => {
         location.href = './products.html';
     }
     const productImgArray = data.images;
-    console.log(productImgArray[0].imgURL);
+    
     $productSection.innerHTML = `
         <div class="productDetail__gallery">
             <img class="productDetail__main" src="${productImgArray[0].imgURL}" alt="">
@@ -85,16 +85,16 @@ const handleProductResult = (doc) => {
 
     $otherImages.forEach(img => {
     const handle_imgGallery = () => {
-        console.log('changeImg');
+        
         const imgSrc = img.getAttribute('src');
-        console.log(img.getAttribute('src'));
+      
         $mainImage.setAttribute('src', imgSrc);
     }
     img.addEventListener('click', handle_imgGallery);
     });
 
     $btnAddToCart.addEventListener('click',function(){
-        console.log('add to cart')
+       
         if(loggedUser){
             if($sizesContainer.sizes.value){
                 let productToCart = {

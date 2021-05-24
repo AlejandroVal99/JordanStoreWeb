@@ -42,7 +42,7 @@ let cart = [];
 const cartBtnNumber = document.querySelector('.btnGoCard span');
 const cartBtnNumberMob = document.querySelector('.numberCartMob');
 
-console.log(cartBtnNumberMob);
+
 
 const cartCollection = db.collection('cart');
 const orderCollection= db.collection('orders');
@@ -61,7 +61,7 @@ const changedCard = () =>{
   cartCollection.doc(loggedUser.uid).set({
     cart,
   });
-  console.log('Agregado');
+  
   if(cartBtnNumber) cartBtnNumber.innerText = cart.length;
     if(cartBtnNumberMob) cartBtnNumberMob.innerText = cart.length;
   if(renderCart) renderCart();
@@ -77,7 +77,7 @@ const getMyCart = (uid) => {
     if(cartBtnNumber) cartBtnNumber.innerText = data.cart.length;
     if(cartBtnNumberMob) cartBtnNumberMob.innerText = data.cart.length;
     cart = data.cart;
-    console.log(cart);
+    
     if(renderCart) renderCart();
     
   });
