@@ -309,26 +309,29 @@ if(params.get('model')){
     switch(params.get('model')){
         case 'airjordani':
             modelArray.push("Air Jordan I");
-            let input =  $filterForm.filterByModel[0].checked = true;
-            
+             $filterForm.filterByModel[0].checked = true;
+             $sortFormMob.filterByMode[0].checked = true;
             productCollection = productCollection.where('model', 'in', modelArray);
         break;
 
         case 'airjordaniii':
             modelArray.push("Air Jordan III");
             $filterForm.filterByModel[1].checked = true;
+            $sortFormMob.filterByMode[1].checked = true;
             productCollection = productCollection.where('model', 'in', modelArray);
         break;
 
         case 'airjordaniv':
             modelArray.push("Air Jordan IV");
             $filterForm.filterByModel[2].checked = true;
+            $sortFormMob.filterByMode[2].checked = true;
             productCollection = productCollection.where('model', 'in', modelArray);
         break;
 
         case 'airjordanv':
             modelArray.push("Air Jordan V");
             $filterForm.filterByModel[3].checked = true;
+            $sortFormMob.filterByMode[3].checked = true;
             productCollection = productCollection.where('model', 'in', modelArray);
         break;
 
