@@ -15,7 +15,7 @@ renderCart = () => {
     }
     totalCart = 0;
     cart.forEach((data) => {
-        console.log(data.id);
+        
         let img = data.img;
         const myCartCard = document.createElement('div');
         myCartCard.classList.add('myCartProductCard');
